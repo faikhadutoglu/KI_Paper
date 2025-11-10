@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  5 NOV 2025 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  10 NOV 2025 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,60 +385,80 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 231
-.
+Underfull \hbox (badness 2119) in paragraph at lines 66--67
+\T1/ptm/m/n/10 wis-senschaftlicher Ent-deck-un-gen valide und sys-tem-a-tisch
+ []
 
+<Ki_nutzung.png, id=1, 1385.175pt x 723.70375pt>
+File: Ki_nutzung.png Graphic file (type png)
+<use Ki_nutzung.png>
+Package pdftex.def Info: Ki_nutzung.png  used on input line 74.
+(pdftex.def)             Requested size: 252.94499pt x 132.14937pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 258
+.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 231
+LaTeX Font Info:    Trying to load font information for U+msb on input line 258
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 233--234
+Underfull \hbox (badness 1735) in paragraph at lines 258--259
 []\T1/ptm/m/n/8 Europäisches Par-la-ment, ``Was ist kün-stliche In-tel-li-genz 
 und wie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 \T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . europarl . europa . eu / ne
 ws / de / headlines /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 \T1/ptm/m/n/8 priorities / kunstliche-[]intelligenz-[]in-[]der-[]eu / 20230601S
 TO93804 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 \T1/ptm/m/n/8 ki-[]gesetz-[]erste-[]regulierung-[]der-[]kunstlichen-[]intellige
 nz$(letzter Zu-griff:
  []
 
-[1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
-ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/
+local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]
-(./bare_jrnl_new_sample4.aux)
+ <./Ki_nutzung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 264--269
+\T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . bitkom . org / Presse / Pre
+sseinformation /
+ []
+
+[2
+
+] (./bare_jrnl_new_sample4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5322 strings out of 474116
- 87150 string characters out of 5743683
- 1936187 words of memory out of 5000000
- 27613 multiletter control sequences out of 15000+600000
+ 5338 strings out of 474116
+ 87471 string characters out of 5743683
+ 1938187 words of memory out of 5000000
+ 27629 multiletter control sequences out of 15000+600000
  667490 words of font info for 143 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,6n,65p,860b,366s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -446,10 +466,10 @@ Here is how much of TeX's memory you used:
 cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (1 page, 59443 bytes).
+Output written on bare_jrnl_new_sample4.pdf (2 pages, 505925 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 35 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

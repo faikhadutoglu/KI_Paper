@@ -57,8 +57,25 @@
 	
 	% ====== I. EINLEITUNG ======
 	\section{Einleitung}
-	\IEEEPARstart{K}{ünstliche} Intelligenz (KI) beschreibt die Fähigkeit technischer Systeme, menschliche Denkprozesse wie logisches Denken, Lernen, Planen und Kreativität nachzuahmen. Sie ermöglicht Maschinen, ihre Umgebung wahrzunehmen, die gewonnenen Informationen zu verarbeiten und daraus eigenständig Entscheidungen abzuleiten, um definierte Ziele zu erreichen. Durch die Analyse großer Datenmengen können KI-Systeme ihr Verhalten an Erfahrungen anpassen und zunehmend autonom agieren\cite{ref:epai}. Mit dem wachsenden Einsatz von KI in der Medizin entstehen neue Möglichkeiten für die Analyse medizinischer Daten - insbesondere in der Diagnostik, der Planung von Therapien sowie in der Unterstützung von Kommunikation und Dokumentation im Gesundheitswesen\cite{ref:baekki}.
+	\IEEEPARstart{K}{ünstliche} Intelligenz (KI) beschreibt die Fähigkeit technischer Systeme, menschliche Denkprozesse wie logisches Denken, Lernen, Planen und Kreativität nachzuahmen. Sie ermöglicht Maschinen, ihre Umgebung wahrzunehmen, die gewonnenen Informationen zu verarbeiten und daraus eigenständig Entscheidungen abzuleiten, um definierte Ziele zu erreichen. Durch die Analyse großer Datenmengen können KI-Systeme ihr Verhalten an Erfahrungen anpassen und zunehmend autonom agieren\cite{ref:epai}. Mit dem wachsenden Einsatz von KI in der Medizin entstehen neue Möglichkeiten für die Analyse medizinischer Daten - insbesondere in der Diagnostik, der Planung von Therapien sowie in der Unterstützung von Kommunikation und Dokumentation im Gesundheitswesen\cite{ref:baekki}. 
 	
+	Aktuelle Erhebungen des Digitalverbands Bitkom in Kooperation mit dem Hartmannbund - dem Verband der Ärztinnen und Ärzte Deutschlands - zeigen, dass sich der Einsatz von KI in deutschen Krankenhäusern seit 2022 innerhalb von drei Jahren nahezu verdoppelt hat. KI wird dabei nicht nur in administrativen Bereichen, etwa zur Praxisverwaltung, eingesetzt, sondern zunehmend auch unmittelbar im medizinischen Kontext - beispielsweise zur Unterstützung bei Diagnosen oder der Analyse von Vitaldaten (siehe Abbildung \ref{fig:Ki_nutzung})\cite{ref:bitkom2025}.
+
+	Darüber hinaus befürworten 67 \% der befragten Ärztinnen und Ärzte eine gezielte Förderung des KI-Einsatzes in der Medizin. Gleichzeitig sehen 78 \% in KI eine große Chance für die zukünftige Entwicklung der Medizin, während 76 \% zugleich eine strenge Regulierung fordern, um Sicherheit und Qualität zu gewährleisten. Diese ambivalente Haltung verdeutlicht sowohl das Potenzial als auch die bestehenden Unsicherheiten beim Einsatz von KI im medizinischen Kontext\cite{ref:bitkom2025}.
+
+	Vor diesem Hintergrund stellt sich die zentrale Forschungsfrage, wie die Zuverlässigkeit KI-gestützter Diagnosen und wissenschaftlicher Entdeckungen valide und systematisch bewertet werden kann. Dabei gilt es zu klären, welche methodischen Standards, Evaluationsprotokolle und regulatorischen Rahmenbedingungen erforderlich sind, um Reproduzierbarkeit, Fairness und Transparenz zu gewährleisten – insbesondere im Hinblick auf die europäischen Vorgaben der Medizinprodukteverordnung (MDR).
+	
+	Dieses Paper verfolgt das Ziel, aktuelle wissenschaftliche Ansätze zur Validierung von KI-Systemen in der Medizin kritisch zu beleuchten und Kriterien für vertrauenswürdige, reproduzierbare und faire KI-basierte Entscheidungsprozesse herauszuarbeiten. 
+	NOTE: IN WELCHEM KAPITEL WORUM ES GEHT KURZ BEXCHRIEBEN
+%	Kapitel II skizziert den Stand der Forschung, Kapitel III analysiert bestehende Herausforderungen und Bewertungsmethoden, während Kapitel IV abschließend Perspektiven für zukünftige Forschungs- und Regulierungsansätze aufzeigt.
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=3.5in]{Ki_nutzung}
+	\caption{\cite{ref:bitkom2025} KI-Nutzung in Arztpraxen 2025 | Quelle: Bitkom Research, 2025}
+	\label{fig:Ki_nutzung}
+\end{figure}
+
 
 	%Einstieg mit einem aktuellen Fakt oder Beispiel (z. B. „Laut WHO nutzen bereits über 50 % der europäischen Krankenhäuser KI-gestützte Systeme in der Diagnostik“).
 	% 1) Motivation: Beispiel(e) f\"ur KI in Diagnostik/Forschung nennen.
@@ -68,13 +85,23 @@
 	%     und durch valide Studien- und Evaluationsprotokolle absichern?“
 	% 4) Ziel der Arbeit und Aufbau der folgenden Kapitel kurz erkl\"aren.
 	
-	% Tipp: Am Ende der Einleitung einen Absatz:
-	% „Im Folgenden werden zun\"achst die Chancen (Abschnitt II)
-	%  und Risiken (Abschnitt III) von KI in Medizin und Wissenschaft dargestellt.
-	%  Abschnitt IV beschreibt Anforderungen an Studien- und Evaluationsprotokolle,
-	%  Abschnitt V geht auf regulatorische und ethische Rahmenbedingungen ein,
-	%  Abschnitt VI diskutiert Human-AI-Teaming, bevor Abschnitt VII ein Fazit zieht.“
+%	Forshcungsfrage verständlich
+%	Teil 1: „Wie zuverlässig sind KI-gestützte Entdeckungen/Diagnosen?“
+%	→ Wie sicher und vertrauenswürdig sind Ergebnisse, die eine KI liefert – z. B. wenn sie eine Krankheit erkennt oder in der Forschung Muster in Daten findet?
+%	→ Also: Kann man sich wirklich auf die KI verlassen?
+%	→ Beispiel: Wenn eine KI bei Röntgenbildern Krebs erkennt – wie oft liegt sie richtig, wie oft falsch?
+%	→ Hier geht es um Genauigkeit, Reproduzierbarkeit und Bias (Verzerrung).
+%	Teil 2: „Wie gestaltet man valide Studien/Evaluationsprotokolle?“
+%	→ Wie kann man das wissenschaftlich überprüfen, ob die KI wirklich zuverlässig ist?
+%	→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
+%	→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
 	
+	\section{Wie funktuniert Künstliche Inteligenz}
+%		→ Hier geht es um Genauigkeit, Reproduzierbarkeit und Bias (Verzerrung).
+%		Teil 2: „Wie gestaltet man valide Studien/Evaluationsprotokolle?“
+%		→ Wie kann man das wissenschaftlich überprüfen, ob die KI wirklich zuverlässig ist?
+%		→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
+%		→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
 	% ================= II. GRUNDLAGEN & CHANCEN ===============
 	\section{Grundlagen und Chancen von KI in Wissenschaft und Medizin}
 	% Kurze Einfuhrung, warum dieses Kapitel.
@@ -227,10 +254,20 @@
 %		European Union, ``Regulation (EU) 2017/745 on medical devices (MDR),'' 2017.
 		
 		%ECTE QUELLEN NICHT LÖSCHEN
-\bibitem{ref:baekki}
-Bundesärztekammer, ``Von ärztlicher Kunst mit Künstlicher Intelligenz: Künstliche Intelligenz in der Medizin,'' Positionspapier, 2025. [Online]. Available: \url{https://www.bundesaerztekammer.de/themen/aerzte/digitalisierung/ki-in-der-medizin}letzter Zugriff: 05.11.2025).
 \bibitem{ref:epai}
 Europäisches Parlament, ``Was ist künstliche Intelligenz und wie wird sie genutzt?'' Generaldirektion Kommunikation, 2023. [Online]. Verfügbar unter: \url{https://www.europarl.europa.eu/news/de/headlines/priorities/kunstliche-intelligenz-in-der-eu/20230601STO93804/ki-gesetz-erste-regulierung-der-kunstlichen-intelligenz}(letzter Zugriff: 05.11.2025).
+		
+\bibitem{ref:baekki}
+Bundesärztekammer, ``Von ärztlicher Kunst mit Künstlicher Intelligenz: Künstliche Intelligenz in der Medizin,'' Positionspapier, 2025. [Online]. Available: \url{https://www.bundesaerztekammer.de/themen/aerzte/digitalisierung/ki-in-der-medizin}letzter Zugriff: 05.11.2025).
+
+\bibitem{ref:bitkom2025}
+Bitkom e.V. und Hartmannbund, 
+„KI in fast jeder siebten Praxis und vielen Kliniken im Einsatz,“ 
+Presseinformation, 27. Mai 2025. [Online].  
+Verfügbar unter: \url{https://www.bitkom.org/Presse/Presseinformation/KI-in-Praxis-und-Kliniken-im-Einsatz}  
+[Zugriff am: 10. Nov. 2025].
+
+
 
 
 				
@@ -296,7 +333,7 @@ Europäisches Parlament, ``Was ist künstliche Intelligenz und wie wird sie genu
 
 
 
-
+%
 %\begin{document}
 %
 %\title{A AAAA Article Using IEEEtran.cls\\ for IEEE Journals and Transactions}
@@ -897,5 +934,5 @@ Europäisches Parlament, ``Was ist künstliche Intelligenz und wie wird sie genu
 %\vfill
 %
 %\end{document}
-
-
+%
+%

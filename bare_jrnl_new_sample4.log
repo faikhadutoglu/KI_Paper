@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  10 NOV 2025 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  11 NOV 2025 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -399,36 +399,36 @@ Overfull \hbox (0.94499pt too wide) in paragraph at lines 74--75
  [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 258
+LaTeX Font Info:    Trying to load font information for U+msa on input line 259
 .
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 258
+LaTeX Font Info:    Trying to load font information for U+msb on input line 259
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1735) in paragraph at lines 258--259
+Underfull \hbox (badness 1735) in paragraph at lines 259--260
 []\T1/ptm/m/n/8 Europäisches Par-la-ment, ``Was ist kün-stliche In-tel-li-genz 
 und wie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 \T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . europarl . europa . eu / ne
 ws / de / headlines /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 \T1/ptm/m/n/8 priorities / kunstliche-[]intelligenz-[]in-[]der-[]eu / 20230601S
 TO93804 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 \T1/ptm/m/n/8 ki-[]gesetz-[]erste-[]regulierung-[]der-[]kunstlichen-[]intellige
 nz$(letzter Zu-griff:
  []
@@ -441,7 +441,7 @@ local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
  <./Ki_nutzung.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 264--269
+Underfull \hbox (badness 10000) in paragraph at lines 265--270
 \T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . bitkom . org / Presse / Pre
 sseinformation /
  []
@@ -466,7 +466,7 @@ Here is how much of TeX's memory you used:
 cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
 ve/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (2 pages, 505925 bytes).
+Output written on bare_jrnl_new_sample4.pdf (2 pages, 505908 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream

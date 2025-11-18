@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  18 NOV 2025 13:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  18 NOV 2025 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,96 +440,98 @@ Overfull \hbox (0.94499pt too wide) in paragraph at lines 122--123
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 149--150
+Underfull \hbox (badness 1360) in paragraph at lines 167--168
 \T1/ptm/m/n/10 Mod-elle typ-is-cher-weise in klin-is-chen Entschei-dung-sun-ter
 -
  []
 
 [2 <./neuronalenetz.png> <./gradientenverfahren.jpg>]
-Underfull \hbox (badness 6332) in paragraph at lines 154--155
+Underfull \hbox (badness 6332) in paragraph at lines 172--173
 []\T1/ptm/b/n/10 Klinische Prog-nose und Risikobe-w-er-tung: \T1/ptm/m/n/10 ML-
 
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 158--159
+Underfull \hbox (badness 2158) in paragraph at lines 176--177
 []\T1/ptm/m/n/10 Im Fokus dieses Beitrags ste-hen datengetriebene KI-
  []
 
 
-LaTeX Warning: Citation `Faiyazuddin.2025' on page 3 undefined on input line 16
-7.
+LaTeX Warning: Citation `faiyazuddin2025' on page 3 undefined on input line 190
+.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 []\T1/ptm/m/n/10 Viele leis-tungs-fähige Mod-elle ver-hal-ten sich für
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 \T1/ptm/m/n/10 auf Sys-te-mebene (Train-ings-daten, Mod-ell-gren-zen,
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 207--208
+Underfull \hbox (badness 6876) in paragraph at lines 244--245
 \T1/ptm/m/n/10 Eval-u-a-tion-spro-tokolle) und Erk-lär-barkeit auf Fall-niveau
  []
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 207--208
+Underfull \hbox (badness 4217) in paragraph at lines 244--245
 \T1/ptm/m/n/10 (z.B. Heatmaps, Fea-ture At-tri-bu-tion) entschei-dend [10]
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 373--374
+Underfull \hbox (badness 1735) in paragraph at lines 361--362
 []\T1/ptm/m/n/8 Europäisches Par-la-ment, ``Was ist kün-stliche In-tel-li-genz 
 und wie
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 \T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . europarl . europa . eu / ne
 ws / de / headlines /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 \T1/ptm/m/n/8 priorities / kunstliche-[]intelligenz-[]in-[]der-[]eu / 20230601S
 TO93804 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 \T1/ptm/m/n/8 ki-[]gesetz-[]erste-[]regulierung-[]der-[]kunstlichen-[]intellige
 nz$(letzter Zu-griff:
  []
 
 
-Underfull \vbox (badness 3471) has occurred while \output is active []
+Underfull \vbox (badness 3579) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 379--384
+Underfull \hbox (badness 10000) in paragraph at lines 367--372
 \T1/ptm/m/n/8 Ver-füg-bar unter: $https : / / www . bitkom . org / Presse / Pre
 sseinformation /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--402
+Underfull \hbox (badness 10000) in paragraph at lines 387--390
 []\T1/ptm/m/n/8 Grant Sander-son, ``Gra-di-ent de-scent, how neu-ral net-works
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--402
+Underfull \hbox (badness 10000) in paragraph at lines 387--390
 \T1/ptm/m/n/8 learn,'' 3Blue1Brown, 2017. [On-line]. Ver-füg-bar unter:
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 414--421
+Underfull \hbox (badness 2142) in paragraph at lines 402--409
 \T1/ptm/m/n/8 digitalhealth / article ? id = 10 . 1371 / journal . pdig . 00000
 22$ (let-zter Zu-griff:
  []
 
-[4] (./bare_jrnl_new_sample4.aux)
+[4
+
+] (./bare_jrnl_new_sample4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -541,8 +543,8 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  5426 strings out of 474116
- 89047 string characters out of 5743683
- 1943187 words of memory out of 5000000
+ 89046 string characters out of 5743683
+ 1942187 words of memory out of 5000000
  27705 multiletter control sequences out of 15000+600000
  675371 words of font info for 158 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -558,7 +560,7 @@ l/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
 2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (4 pages, 1729432 bytes).
+Output written on bare_jrnl_new_sample4.pdf (4 pages, 1729068 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream

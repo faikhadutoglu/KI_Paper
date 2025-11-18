@@ -140,10 +140,28 @@ Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativ
 	
 	\section{Chancen von KI in Wissenschaft und Medizin}
 	\label{sec:chancen}
+		% Kurze Einfuhrung, warum dieses Kapitel.
+	% Ziel: Leser:innen verstehen, was f\"ur KI-Systeme gemeint sind
+	% und welche Potenziale sie haben.(
+	%	Schwerpunkt: Nutzen + konkrete Anwendungsfelder + wissenschaftliche Beispiele.
+	%	Automatisierte Diagnostik: Radiologie (Röntgen, MRT, CT), Dermatologie, Pathologie.
+	%	Forschung \& Medikamentenentwicklung: KI entdeckt Muster in Gen- und Moleküldaten (z. B. DeepMind AlphaFold).
+	%	Präzisions- \& Individualmedizin: KI passt Therapien an Patientendaten an.
+	%	Wissenschaftliche Effizienz: Beschleunigte Datenauswertung, Hypothesengenerierung, Publikationsanalyse.
+	%	Gesellschaftlicher Nutzen: Entlastung medizinischer Fachkräfte, Kosteneffizienz.
+	% Tipp: Ein Mini-Beispiel bringt Punkte:
+	%	„In einer Studie von Esteva et al. (2017) erreichte ein neuronales Netz bei der Hautkrebsdiagnose eine Genauigkeit von 94 % – vergleichbar mit erfahrenen Dermatologen.“)
+	%	
 	
 	Künstliche Intelligenz (KI) hat sich zu einem zentralen Werkzeug in biomedizinischer Forschung und moderner Patientenversorgung entwickelt. Besonders datengetriebene Verfahren des maschinellen Lernens und Deep Learning werden inzwischen routinemäßig für Bildanalyse, Prognosemodelle und wissenschaftliche Auswertungen eingesetzt\cite{ref:hai2025aiindex}.
 	
 	\subsection{Grundbegriffe und Anwendungsfelder}
+		% - kurz definieren: Machine Learning, Deep Learning, klinische Entscheidungsunterst\"utzung
+	% - typische Anwendungsfelder:
+	%   * Bildgebende Diagnostik (Radiologie, Dermatologie, Pathologie)
+	%   * Vorhersagemodelle (z. B. Risikoabsch\"atzung, Prognose)
+	%   * Forschung (z. B. Drug Discovery, Genomik)
+	
 	\label{subsec:grundbegriffe}
 	
 	Unter \emph{Machine Learning} (ML) werden Modelle verstanden, die aus Beispieldaten statistische Zusammenhänge lernen, anstatt über explizite Regeln programmiert zu werden. \emph{Deep Learning} (DL) bezeichnet ML-Methoden mit tiefen neuronalen Netzen und ist insbesondere für Bild-, Text- und Sequenzdaten relevant\cite{ref:hai2025aiindex}. In der Medizin werden solche Modelle typischerweise in klinischen Entscheidungsunterstützungssystemen genutzt, die Diagnosen, Risikoprognosen oder Therapieentscheidungen ergänzen\cite{ref:hai2025aiindex}.
@@ -159,12 +177,17 @@ Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativ
 	
 	\subsection{Chancen und Nutzen}
 	\label{subsec:chancen_nutzen}
+		% - Automatisierung, Zeitersparnis, bessere Sensitivit\"at/Detektionsraten
+	% - Personalisierte Medizin
+	% - Entlastung von Fachpersonal
+	% - Kurze Literaturbeispiele mit Zitaten, z. B.:
+	%   „In \cite{refX} erzielte ein CNN in der Hautkrebsdiagnostik eine mit Dermatolog:innen vergleichbare Genauigkeit.“
 	
 	Die beschriebenen Systeme eröffnen eine Vielzahl konkreter Potenziale für Wissenschaft und medizinische Praxis.
 	
 	\paragraph{Steigerung der diagnostischen Qualität.}
 	
-	Mehrere aktuelle klinische Studien zeigen, dass KI-Modelle in bestimmten diagnostischen Bildgebungsaufgaben vergleichbare oder sogar bessere Leistungen als Expert:innen erzielen\cite{ref:hai2025aiindex,Faiyazuddin.2025}. Besonders vielversprechend sind Human-AI-Teams, da sich deren Diagnosegenauigkeit in Studien teils als überlegen gegenüber Einzelentscheiden erwiesen hat\cite{ref:hai2025aiindex}.
+	Mehrere aktuelle klinische Studien zeigen, dass KI-Modelle in bestimmten diagnostischen Bildgebungsaufgaben vergleichbare oder sogar bessere Leistungen als Expert:innen erzielen\cite{ref:hai2025aiindex}\cite{faiyazuddin2025}. Besonders vielversprechend sind Human-AI-Teams, da sich deren Diagnosegenauigkeit in Studien teils als überlegen gegenüber Einzelentscheiden erwiesen hat\cite{ref:hai2025aiindex}.
 	
 	\paragraph{Präzisionsmedizin und neue wissenschaftliche Einsichten.}
 	
@@ -182,11 +205,18 @@ Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativ
 	
 	\section{Risiken und wissenschaftliche Herausforderungen}
 	\label{sec:risiken}
+		% Ziel: zeigen, dass ihr die Probleme versteht (wichtig f\"ur eine 1.0).
 	
 	Mit dem zunehmenden Einsatz von KI in sicherheitskritischen Kontexten steigen die Anforderungen an Qualität und Transparenz der zugrunde liegenden Studien. Klassische Leistungskennzahlen nähern sich inzwischen teils der Sättigung, gleichzeitig bleiben zentrale Fragen zu Robustheit, Fairness und langfristigem Verhalten vieler Systeme offen\cite{ref:hai2025aiindex}.
+
+	
 	
 	\subsection{Reproduzierbarkeit von KI-Ergebnissen}
 	\label{subsec:reproduzierbarkeit}
+		% - Erkl\"aren, was Reproduzierbarkeit bedeutet.
+	% - Probleme: andere Datens\"atze, andere Vorverarbeitung, andere Modellversionen.
+	% - Warum das in der Medizin kritisch ist (Patientensicherheit, Evidenz).
+	
 	
 	Reproduzierbarkeit bedeutet, dass unabhängige Gruppen unter ähnlichen Bedingungen zu kongruenten Ergebnissen gelangen. Für medizinische KI umfasst das:
 	\begin{itemize}
@@ -197,72 +227,30 @@ Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativ
 	Da immer mehr KI-Systeme reale Behandlungsentscheidungen beeinflussen, sind diese Standards essenziell für Patient:innensicherheit und evidenzbasierten Einsatz.
 	
 	\subsection{Bias und Fairness}
+	
+		% - Datensatz-Bias: unterrepr\"asentierte Gruppen (Geschlecht, Ethnie, Alter).
+	% - Folgen: unfaire Fehlerraten in vulnerablen Gruppen.
+	% - Begriffe: Fairness, Disparit\"at, Calibration, etc. (nur kurz und verst\"andlich).
+	
 	\label{subsec:bias_fairness}
 	
 	Bias kann auftreten, wenn Vorhersagen systematisch bestimmte Gruppen benachteiligen, etwa aufgrund einseitiger Trainingsdaten oder ungeeigneter Zielgrößen\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}. Das Vertrauen, dass KI diskriminierungsfrei agiert, ist laut Umfragen gesunken. Wissenschaftliche Studien mahnen daher, Leistungsvergleiche in relevanten Subgruppen (Geschlecht, Alter, Ethnie) zu berichten und Zielgrößen kritisch zu wählen\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}.
 	
 	\subsection{Transparenz und Erklärbarkeit (Explainable AI)}
 	\label{subsec:xai}
-	
+		% - „Black-Box“-Problem.
+	% - Warum \"Arzt/\"Arztin die Entscheidung nachvollziehen k\"onnen muss.
+	% - Kurzer Hinweis auf XAI-Methoden (LIME, SHAP, Heatmaps), ohne ins Detail zu gehen.
 	Viele leistungsfähige Modelle verhalten sich für Nutzer:innen wie Black Boxes. Deshalb sind Transparenz auf Systemebene (Trainingsdaten, Modellgrenzen, Evaluationsprotokolle) und Erklärbarkeit auf Fallniveau (z.B. Heatmaps, Feature Attribution) entscheidend\cite{ref:chen2022}\cite{ref:hai2025aiindex}. Human-AI-Teams profitieren dann am meisten, wenn die Nutzerinnen die Stärken und Schwächen des Modells einschätzen können.
 	
-	\paragraph{}
 	Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sondern essenzielle Bedingungen für eine sichere Integration in den Versorgungsalltag\cite{ref:hai2025aiindex}\cite{ref:chen2022}.
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	\section{Chancen von KI in Wissenschaft und Medizin}
-	% Kurze Einfuhrung, warum dieses Kapitel.
-	% Ziel: Leser:innen verstehen, was f\"ur KI-Systeme gemeint sind
-	% und welche Potenziale sie haben.(
-%	Schwerpunkt: Nutzen + konkrete Anwendungsfelder + wissenschaftliche Beispiele.
-%	Automatisierte Diagnostik: Radiologie (Röntgen, MRT, CT), Dermatologie, Pathologie.
-%	Forschung \& Medikamentenentwicklung: KI entdeckt Muster in Gen- und Moleküldaten (z. B. DeepMind AlphaFold).
-%	Präzisions- \& Individualmedizin: KI passt Therapien an Patientendaten an.
-%	Wissenschaftliche Effizienz: Beschleunigte Datenauswertung, Hypothesengenerierung, Publikationsanalyse.
-%	Gesellschaftlicher Nutzen: Entlastung medizinischer Fachkräfte, Kosteneffizienz.
-% Tipp: Ein Mini-Beispiel bringt Punkte:
-%	„In einer Studie von Esteva et al. (2017) erreichte ein neuronales Netz bei der Hautkrebsdiagnose eine Genauigkeit von 94 % – vergleichbar mit erfahrenen Dermatologen.“)
-%	
-	\subsection{Grundbegriffe und Anwendungsfelder}
-	% - kurz definieren: Machine Learning, Deep Learning, klinische Entscheidungsunterst\"utzung
-	% - typische Anwendungsfelder:
-	%   * Bildgebende Diagnostik (Radiologie, Dermatologie, Pathologie)
-	%   * Vorhersagemodelle (z. B. Risikoabsch\"atzung, Prognose)
-	%   * Forschung (z. B. Drug Discovery, Genomik)
-	
-	\subsection{Chancen und Nutzen}
-	% - Automatisierung, Zeitersparnis, bessere Sensitivit\"at/Detektionsraten
-	% - Personalisierte Medizin
-	% - Entlastung von Fachpersonal
-	% - Kurze Literaturbeispiele mit Zitaten, z. B.:
-	%   „In \cite{refX} erzielte ein CNN in der Hautkrebsdiagnostik eine mit Dermatolog:innen vergleichbare Genauigkeit.“
-	
 	% ============== III. RISIKEN, REPRODUZIERBARKEIT, BIAS ============
-	\section{Risiken und wissenschaftliche Herausforderungen}
-	% Ziel: zeigen, dass ihr die Probleme versteht (wichtig f\"ur eine 1.0).
 	
-	\subsection{Reproduzierbarkeit von KI-Ergebnissen}
-	% - Erkl\"aren, was Reproduzierbarkeit bedeutet.
-	% - Probleme: andere Datens\"atze, andere Vorverarbeitung, andere Modellversionen.
-	% - Warum das in der Medizin kritisch ist (Patientensicherheit, Evidenz).
 	
-	\subsection{Bias und Fairness}
-	% - Datensatz-Bias: unterrepr\"asentierte Gruppen (Geschlecht, Ethnie, Alter).
-	% - Folgen: unfaire Fehlerraten in vulnerablen Gruppen.
-	% - Begriffe: Fairness, Disparit\"at, Calibration, etc. (nur kurz und verst\"andlich).
 	
-	\subsection{Transparenz und Erkl\"arbarkeit (Explainable AI)}
-	% - „Black-Box“-Problem.
-	% - Warum \"Arzt/\"Arztin die Entscheidung nachvollziehen k\"onnen muss.
-	% - Kurzer Hinweis auf XAI-Methoden (LIME, SHAP, Heatmaps), ohne ins Detail zu gehen.
 	
 	% ================= IV. STUDIEN & EVALUATION ===================
 	\section{Valide Studien und Evaluationsprotokolle}

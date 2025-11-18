@@ -137,6 +137,87 @@ Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativ
 %		→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
 %		→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
 	% ================= II. GRUNDLAGEN & CHANCEN ===============
+	
+	\section{Chancen von KI in Wissenschaft und Medizin}
+	\label{sec:chancen}
+	
+	Künstliche Intelligenz (KI) hat sich zu einem zentralen Werkzeug in biomedizinischer Forschung und moderner Patientenversorgung entwickelt. Besonders datengetriebene Verfahren des maschinellen Lernens und Deep Learning werden inzwischen routinemäßig für Bildanalyse, Prognosemodelle und wissenschaftliche Auswertungen eingesetzt\cite{ref:hai2025aiindex}.
+	
+	\subsection{Grundbegriffe und Anwendungsfelder}
+	\label{subsec:grundbegriffe}
+	
+	Unter \emph{Machine Learning} (ML) werden Modelle verstanden, die aus Beispieldaten statistische Zusammenhänge lernen, anstatt über explizite Regeln programmiert zu werden. \emph{Deep Learning} (DL) bezeichnet ML-Methoden mit tiefen neuronalen Netzen und ist insbesondere für Bild-, Text- und Sequenzdaten relevant\cite{ref:hai2025aiindex}. In der Medizin werden solche Modelle typischerweise in klinischen Entscheidungsunterstützungssystemen genutzt, die Diagnosen, Risikoprognosen oder Therapieentscheidungen ergänzen\cite{ref:hai2025aiindex}.
+	
+	Typische Anwendungsfelder sind:
+	\begin{itemize}
+		\item \textbf{Bildgebende Diagnostik:} In Radiologie und Pathologie analysieren DL-Modelle Röntgen-, CT- und MRT-Daten oder histologische Schnitte, markieren auffällige Regionen und unterstützen bei der Befundung\cite{ref:hai2025aiindex}.
+		\item \textbf{Klinische Prognose und Risikobewertung:} ML-Modelle verarbeiten tabellarische klinische Daten, Laborwerte oder Vitalparameter, um Komplikations- oder Rehospitalisierungsrisiken abzuschätzen\cite{ref:hai2025aiindex}.
+		\item \textbf{Biomedizinische Forschung:} Modellfamilien für Proteinsequenzen und -strukturen (z.\,B. AlphaFold, ESM3) sowie multimodale Modelle unterstützen die Identifikation neuer Zielstrukturen und Wirkstoffkandidaten\cite{ref:hai2025aiindex}.
+	\end{itemize}
+	
+	Im Fokus dieses Beitrags stehen datengetriebene KI-Systeme, die auf großen medizinischen oder biomedizinischen Datensätzen trainiert werden und in Diagnostik, Prognose und Forschung Anwendung finden\cite{ref:hai2025aiindex}.
+	
+	\subsection{Chancen und Nutzen}
+	\label{subsec:chancen_nutzen}
+	
+	Die beschriebenen Systeme eröffnen eine Vielzahl konkreter Potenziale für Wissenschaft und medizinische Praxis.
+	
+	\paragraph{Steigerung der diagnostischen Qualität.}
+	
+	Mehrere aktuelle klinische Studien zeigen, dass KI-Modelle in bestimmten diagnostischen Bildgebungsaufgaben vergleichbare oder sogar bessere Leistungen als Expert:innen erzielen\cite{ref:hai2025aiindex,Faiyazuddin.2025}. Besonders vielversprechend sind Human-AI-Teams, da sich deren Diagnosegenauigkeit in Studien teils als überlegen gegenüber Einzelentscheiden erwiesen hat\cite{ref:hai2025aiindex}.
+	
+	\paragraph{Präzisionsmedizin und neue wissenschaftliche Einsichten.}
+	
+	Große Modellarchitekturen für Proteinstrukturen und biologische Sequenzen ermöglichen es, komplexe Zusammenhänge in Omics-Daten besser zu erfassen und Strukturinformationen in bisher unerreichtem Umfang zu generieren\cite{ref:hai2025aiindex}. Dadurch werden neue Hypothesen in Biologie und Pharmakologie möglich, beispielsweise bei der Suche nach geeigneten Wirkstoffbindestellen.
+	
+	\paragraph{Effizienzgewinne und Entlastung klinischer Teams.}
+	
+	Ökonomische Analysen deuten darauf hin, dass KI in vielen medizinischen Sektoren messbare Produktivitätsgewinne ermöglicht, insbesondere durch Automatisierung repetitiver Tätigkeiten wie Vorbefundung, Triage und Dokumentation\cite{ref:hai2025aiindex}. Synthetische Daten werden als innovative Möglichkeit für datenschutzkonforme Trainingsdatensätze und das Abbilden seltener Szenarien diskutiert\cite{ref:hai2025aiindex}.
+	
+	\paragraph{Gesellschaftlicher Nutzen und Akzeptanz.}
+	
+	Befragungen zeigen, dass viele Menschen KI-Anwendungen als nützlich wahrnehmen und deren Einfluss auf Alltag und Gesundheit erwarten; jedoch besteht weiterhin Skepsis bezüglich ethischer Standards und der Realisierbarkeit versprochener Vorteile\cite{ref:hai2025aiindex}.
+	
+	% ================= III. RISIKEN, REPRODUZIERBARKEIT, BIAS ===============
+	
+	\section{Risiken und wissenschaftliche Herausforderungen}
+	\label{sec:risiken}
+	
+	Mit dem zunehmenden Einsatz von KI in sicherheitskritischen Kontexten steigen die Anforderungen an Qualität und Transparenz der zugrunde liegenden Studien. Klassische Leistungskennzahlen nähern sich inzwischen teils der Sättigung, gleichzeitig bleiben zentrale Fragen zu Robustheit, Fairness und langfristigem Verhalten vieler Systeme offen\cite{ref:hai2025aiindex}.
+	
+	\subsection{Reproduzierbarkeit von KI-Ergebnissen}
+	\label{subsec:reproduzierbarkeit}
+	
+	Reproduzierbarkeit bedeutet, dass unabhängige Gruppen unter ähnlichen Bedingungen zu kongruenten Ergebnissen gelangen. Für medizinische KI umfasst das:
+	\begin{itemize}
+		\item transparente Beschreibung von Datensätzen und deren Vorverarbeitung,
+		\item robuste Evaluationsprotokolle mit externer Validierung,
+		\item nachvollziehbare Dokumentation der Modellarchitektur und Hyperparameter\cite{ref:hai2025aiindex}.
+	\end{itemize}
+	Da immer mehr KI-Systeme reale Behandlungsentscheidungen beeinflussen, sind diese Standards essenziell für Patient:innensicherheit und evidenzbasierten Einsatz.
+	
+	\subsection{Bias und Fairness}
+	\label{subsec:bias_fairness}
+	
+	Bias kann auftreten, wenn Vorhersagen systematisch bestimmte Gruppen benachteiligen, etwa aufgrund einseitiger Trainingsdaten oder ungeeigneter Zielgrößen\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}. Das Vertrauen, dass KI diskriminierungsfrei agiert, ist laut Umfragen gesunken. Wissenschaftliche Studien mahnen daher, Leistungsvergleiche in relevanten Subgruppen (Geschlecht, Alter, Ethnie) zu berichten und Zielgrößen kritisch zu wählen\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}.
+	
+	\subsection{Transparenz und Erklärbarkeit (Explainable AI)}
+	\label{subsec:xai}
+	
+	Viele leistungsfähige Modelle verhalten sich für Nutzer:innen wie Black Boxes. Deshalb sind Transparenz auf Systemebene (Trainingsdaten, Modellgrenzen, Evaluationsprotokolle) und Erklärbarkeit auf Fallniveau (z.B. Heatmaps, Feature Attribution) entscheidend\cite{ref:chen2022}\cite{ref:hai2025aiindex}. Human-AI-Teams profitieren dann am meisten, wenn die Nutzerinnen die Stärken und Schwächen des Modells einschätzen können.
+	
+	\paragraph{}
+	Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sondern essenzielle Bedingungen für eine sichere Integration in den Versorgungsalltag\cite{ref:hai2025aiindex}\cite{ref:chen2022}.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	\section{Chancen von KI in Wissenschaft und Medizin}
 	% Kurze Einfuhrung, warum dieses Kapitel.
 	% Ziel: Leser:innen verstehen, was f\"ur KI-Systeme gemeint sind
@@ -320,6 +401,38 @@ Grant Sanderson, ``Gradient descent, how neural networks learn,'' 3Blue1Brown, 2
 (letzter Zugriff: 16.11.2025).
 
 
+%nico Quellen
+
+\bibitem{ref:hai2025aiindex}
+Stanford Institute for Human-Centered Artificial Intelligence (HAI), 
+\textit{Artificial Intelligence Index Report 2025}. 
+Stanford University, 2025. [Online]. 
+Verfügbar unter: \url{https://aiindex.stanford.edu} 
+(letzter Zugriff: 05.11.2025).
+
+\bibitem{ref:celi2022bias}
+Celi, L. A., Cellini, J., Charpignon, M.-L., Dee, E. C., Dernoncourt, F., 
+Eber, R., Mitchell, W. G., Moukheiber, L., Schirmer, J., Situ, J., 
+Paguio, J., Park, J., Wawira, J. G., Yao, S., \& for MIT Critical Data, 
+„Sources of bias in artificial intelligence that perpetuate health disparities,“ 
+\textit{PLOS Digital Health}, 2022. [Online]. 
+Verfügbar unter: \url{https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000022} 
+(letzter Zugriff: 05.11.2025).
+
+\bibitem{ref:faiyazuddin2025}
+Faiyazuddin, M., Rahman, S. J. Q., Anand, G., Siddiqui, R. K., Mehta, R., 
+Khatib, M. N., Gaidhane, S., Zahiruddin, Q. S., Hussain, A., \& Sah, R., 
+„The Impact of Artificial Intelligence on Healthcare,“ 
+\textit{National Library of Medicine}, 2025. [Online]. 
+Verfügbar unter: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC11702416/} 
+(letzter Zugriff: 05.11.2025).
+
+\bibitem{ref:chen2022}
+Chen, H., Gomez, C., Huang, C.-M., \& Unberath, M., 
+„Explainable medical imaging AI needs human-centered design,“ 
+\textit{Nature}, 2022. [Online]. 
+Verfügbar unter: \url{https://www.nature.com/articles/s41746-022-00699-2} 
+(letzter Zugriff: 05.11.2025).
 
 
 				

@@ -96,40 +96,14 @@
 %	→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
 %	→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
 	
-	\section{Wie funktioniert Künstliche Intelligenz}
-	
-	Die Funktionsweise moderner Systeme der Künstlichen Intelligenz (KI) basiert im Kern auf der Fähigkeit, große Datenmengen zu verarbeiten und darin Muster sowie statistische Zusammenhänge zu erkennen. Ein zentrales Konzept hierbei sind künstliche neuronale Netze, die dem Aufbau biologischer Neuronen nachempfunden sind und Informationen in mehreren hierarchischen Schichten verarbeiten \cite{ref:alexander}. 
-	
-	Neuronale Netze bestehen aus einem Input-Layer, mehreren Hidden-Layers und einem Output-Layer. Jede Schicht wandelt die Aktivierungen der vorherigen Schicht mithilfe gewichteter Verbindungen um, sodass unterschiedliche Muster repräsentiert werden können \cite{ref:alexander}. Beispielsweise werden bei der Bildverarbeitung die Eingabedaten eines neuronalen Netzes als Vektor aus Pixelintensitäten dargestellt. Jedes Pixel entspricht dabei einem Eingabeneuron und erhält abhängig von seiner Helligkeit einen numerischen Wert. Ein Bild mit einer Auflösung von 28×28 Pixeln wird somit zu einem 784-dimensionalen Spaltenvektor transformiert, der dem Netzwerk als Input dient. Die gewichtete Summe der Eingangsaktivierungen bestimmt dabei die Aktivierung eines Neurons in der nächsten Schicht. Während des Trainingsprozesses werden die Gewichte zwischen den Neuronen schrittweise angepasst, sodass das zunächst „dumme“ Netzwerk zunehmend aussagekräftige Merkmalsrepräsentationen lernt und schließlich in der Lage ist, Muster - wie etwa handgeschriebene Ziffern - zu "erkennen"(siehe Abb. \ref{fig:neuronalenetz}). Dieses Vorgehen basiert im Allgemeinen auf dem grundlegenden Prinzip, dass neuronale Netze durch iterative Gewichtsoptimierung aus Beispieldaten abstrahieren und eigenständig Muster erlernen \cite{ref:alexander}.
-	
-	
-	
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=2.5in]{neuronalenetz}
-	\caption{\cite{ref:alexander} Darstellung eines vollständig verbundenen neuronalen Netzes zur Klassifikation handgeschriebener Ziffern.}
-	\label{fig:neuronalenetz}
-\end{figure}
 
-	Der Lernprozess eines neuronalen Netzes besteht darin, die Gewichte zwischen den Neuronen so anzupassen, dass relevante Merkmale in den Daten verstärkt und irrelevante abgeschwächt werden. Um das Netzwerk möglichst effizient zu optimieren, gibt es verschiedene Optimierungsverfahren. Eine der bekanntesten Methoden ist die Gradientenmethode.
-	
-	Bei einem einzelnen Neuron lässt sich die Kostenfunktion\footnote{Die Kostenfunktion $C(w)$ beschreibt, wie stark die Vorhersagen des Netzes von den tatsächlichen Zielwerten abweichen und quantifiziert damit den Fehler für die gegebenen Gewichte.} $C(w)$ zwei-dimensional darstellen, wobei die x-Achse das Gewicht $w$ und die y-Achse den Fehler abbildet (siehe \ref{fig:gradientenverfahren}). In diesem Fall kann das Minimum analytisch berechnet werden. Bei mehreren Neuronen steigt die Dimensionalität: Mit zwei Neuronen entsteht ein dreidimensionales, mit drei Neuronen ein vierdimensionales Problem. Obwohl sich diese hochdimensionalen Räume nicht visualisieren lassen, können mathematisch Optimierungen durchgeführt werden.
-	
-	Das Gradientenverfahren funktioniert nach folgendem Prinzip: Die Gewichte werden zunächst zufällig initialisiert. Alle Gewichte werden in einem Vektor $\mathbf{w}$ zusammengefasst, und der Gradient $\nabla f(\mathbf{w})$ dieses Vektors wird berechnet, welcher die Richtung des steilsten Anstiegs anzeigt. Um zum Minimum zu gelangen, geht man in die entgegengesetzte Richtung  $-\nabla f(\mathbf{w})$. In dieser Richtung werden iterativ kleine Schritte der Größe $\Delta x$ durchgeführt, um das Minimum schrittweise anzunähern(siehe \ref{fig:gradientenverfahren}). Durch diesen iterativen Anpassungsprozess verbessert das Netzwerk schrittweise seine internen Repräsentationen und erzeugt zunehmend zuverlässigere und präzisere Ausgaben.
-	
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=3.5in]{gradientenverfahren}
-	\caption{\cite{ref:alexander}Eindimensionale Kostenfunktion mit einem Gewicht (links) und hochdimensionale Kostenfunktion mit zwei Gewichten (rechts) mit lokalen Minima.}
-	\label{fig:gradientenverfahren}
-\end{figure}
+\section{Wie funktioniert Künstliche Intelligenz}
 
-Allerdings hängt dieser Lernprozess entscheidend von der Qualität der zugrunde liegenden Trainingsdaten ab. Während neuronale Netze darauf ausgelegt sind, aus Beispieldaten verallgemeinerbare Muster zu lernen, setzt dies voraus, dass die Daten korrekt, ausgewogen und repräsentativ sind. In realen Anwendungen ist dies jedoch selten gegeben: Trainingsdaten enthalten häufig Ungleichverteilungen, fehlerhafte oder inkonsistente Labels sowie strukturelle Verzerrungen, die das Modell unbewusst mitlernt. Da neuronale Netze ausschließlich statistische Regelmäßigkeiten aus den vorliegenden Daten extrahieren, ohne deren Ursprung oder Validität zu hinterfragen, reproduzieren sie systematisch auch solche unerwünschten Muster. Diese Form der fehlerhaften oder unausgewogenen Informationsaufnahme wird als Bias bezeichnet. Bias kann unterschiedliche Ausprägungen haben: Sampling Bias entsteht, wenn bestimmte Gruppen in den Daten über- oder unterrepräsentiert sind und das Modell dadurch verzerrte Verteilungen lernt; Measurement Bias ergibt sich aus ungenauen, inkonsistenten oder gruppenspezifisch verzerrten Mess- und Annotierungsprozessen; und Technical Bias entsteht durch technische Artefakte wie unterschiedliche Bildauflösungen, Scannerparameter oder Aufnahmebedingungen, die vom Modell irrtümlich als relevante Merkmale interpretiert werden. Diese Verzerrungen sind damit keine nachgelagerten Effekte, sondern eine direkte Folge des datengetriebenen Lernprozesses: Alles, was in den Trainingsdaten enthalten ist - einschließlich ihrer systematischen Fehler -, wird durch die Optimierung verstärkt und prägt die späteren Vorhersagen des Modells. Dadurch können insbesondere in der medizinischen Diagnostik bestimmte Patientengruppen schlechter erkannt werden oder Entscheidungen auf scheinbar statistischen, tatsächlich aber klinisch irrelevanten Zusammenhängen beruhen.
+Die Funktionsweise moderner Systeme der Künstlichen Intelligenz (KI) basiert im Kern auf der Fähigkeit, große Datenmengen zu verarbeiten und darin Muster sowie statistische Zusammenhänge zu erkennen. Ein zentrales Konzept hierbei sind künstliche neuronale Netze, die dem Aufbau biologischer Neuronen nachempfunden sind und Informationen in mehreren hierarchischen Schichten verarbeiten \cite{ref:alexander}.
 
-Zusammenfassend beruht der Lernprozess künstlicher Intelligenz auf der iterativen Anpassung interner Modellparameter anhand umfangreicher, jedoch unvermeidbar fehlerbehafteter Datenbestände. Dieses grundlegende Prinzip ist zentral für die Leistungsfähigkeit moderner KI-Systeme, bringt jedoch zugleich erhebliche Herausforderungen im Hinblick auf Zuverlässigkeit, Fairness und Reproduzierbarkeit mit sich.
-	
+Neuronale Netze bestehen aus einem Input-Layer, mehreren Hidden-Layers und einem Output-Layer\footnote{Der Output-Layer ist die letzte Schicht des Netzwerks und produziert die endgültige Vorhersage oder Entscheidung. Bei einer medizinischen Diagnose könnte der Output-Layer beispielsweise eine Wahrscheinlichkeit zwischen 0 und 1 ausgeben, die anzeigt, ob eine bestimmte Krankheit vorhanden ist oder nicht.}. Jede Schicht wandelt die Aktivierungen der vorherigen Schicht mithilfe gewichteter Verbindungen um, sodass unterschiedliche Muster repräsentiert werden können \cite{ref:alexander}. Während des Trainingsprozesses werden die Gewichte zwischen den Neuronen schrittweise angepasst, sodass das Netzwerk zunehmend aussagekräftige Merkmalsrepräsentationen lernt und schließlich in der Lage ist, Muster zu erkennen und zu generalisieren \cite{ref:alexander}.
 
-	
+Dieser Prozess hängt jedoch entscheidend von der Qualität der Trainingsdaten ab. Neuronale Netze lernen ausschließlich aus den Mustern in ihren Daten - sie können daher nur so zuverlässig sein wie die Daten, auf denen sie trainiert wurden\cite{ref:morhammed2025}. Diese Abhängigkeit von guter Datenqualität ist entscheidend, um die Zuverlässigkeit KI-gestützter Diagnosen zu verstehen und zeigt, warum strenge Validierungsverfahren notwendig sind.
 	%Hier Grundlagen
 %		→ Hier geht es um Genauigkeit, Reproduzierbarkeit und Bias (Verzerrung).
 %		Teil 2: „Wie gestaltet man valide Studien/Evaluationsprotokolle?“
@@ -381,6 +355,13 @@ F. Schmiedchen, M. Hafner, A. von Gernler und K. P. Kratzer (Hrsg.),
 Springer Vieweg, Berlin, 2026. 
 [Online]. Verfügbar unter: \url{https://doi.org/10.1007/978-3-662-71567-3} 
 (letzter Zugriff: 17.11.2025).
+
+\bibitem{ref:morhammed2025}
+S. Morhammed, L. Budach, M. Feuerpfeil, N. Ihde, A. Nathansen, N. Noack, H. Patzlaff, F. Naumann und H. Harmouch, 
+``The effects of data quality on machine learning performance on tabular data,'' 
+\textit{Information Systems}, vol. 132, 2025, Art. Nr. 102549, ISSN 0306-4379. 
+[Online]. Verfügbar unter: \url{https://www.sciencedirect.com/science/article/pii/S0306437925000341} 
+(letzter Zugriff: 05.11.2025).  
 
 
 \bibitem{ref:3b1b}

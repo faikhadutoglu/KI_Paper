@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  9 DEC 2025 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  9 DEC 2025 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,8 +522,8 @@ Underfull \hbox (badness 4647) in paragraph at lines 211--212
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 211--212
-\T1/ptm/m/n/10 (^^RPost-Market Surveil-lance^^P), um Leis-tungsabfälle, Bias-
+Underfull \hbox (badness 3000) in paragraph at lines 211--212
+\T1/ptm/m/n/10 (^^RPost-Market Surveil-lance"), um Leis-tungsabfälle, Bias-
  []
 
 [4]
@@ -712,7 +712,7 @@ Here is how much of TeX's memory you used:
 l/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (7 pages, 549051 bytes).
+Output written on bare_jrnl_new_sample4.pdf (7 pages, 549053 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

@@ -187,7 +187,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 
 	Zur Bewertung diagnostischer Leistung werden etablierte Metriken aus der medizinischen Statistik eingesetzt. Die wichtigsten Kennzahlen umfassen Sensitivität (True-Positive-Rate), Spezifität (True-Negative-Rate), Genauigkeit sowie der F1-Score \cite{ref:jurman2012comparison}. Bei ungleich verteilten Klassen - beispielsweise seltenen Erkrankungen – ist die Genauigkeit jedoch wenig aussagekräftig. In diesen Fällen sind Metriken wie die AUC-ROC (Area Under the Receiver Operating Characteristic Curve) oder die Precision-Recall-AUC besser geeignet, da sie die Modellleistung bei unausgeglichenen Klassen realistischer abbilden \cite{ref:saito2015precision}.
 	
-	Für klinische Bewertungen spielt zudem die sogenannte „Clinical Utility“ eine Rolle. Diese berücksichtigt, wie sich ein falsch-positiver oder falsch-negativer Befund auf klinische Entscheidungen auswirkt. Moderne Studien kombinieren daher statistische Leistungsmaße mit klinischen Endpunkten, etwa veränderten Therapieentscheidungen oder Diagnosezeiten \cite{ref:brat2020realworld}. Nur durch diesen integrativen Ansatz lässt sich ermitteln, ob eine KI nicht nur statistisch gut performt, sondern auch klinisch sinnvoll eingesetzt werden kann.
+	Für klinische Bewertungen spielt zudem die sogenannte „Clinical Utility" eine Rolle. Diese berücksichtigt, wie sich ein falsch-positiver oder falsch-negativer Befund auf klinische Entscheidungen auswirkt. Moderne Studien kombinieren daher statistische Leistungsmaße mit klinischen Endpunkten, etwa veränderten Therapieentscheidungen oder Diagnosezeiten \cite{ref:brat2020realworld}. Nur durch diesen integrativen Ansatz lässt sich ermitteln, ob eine KI nicht nur statistisch gut performt, sondern auch klinisch sinnvoll eingesetzt werden kann.
 	
 	\subsection{Vergleich mit Expert:innen und klinische Studien}
 
@@ -208,7 +208,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	\subsection{KI als Medizinprodukt und die EU-MDR}
 
-	Die europäische Medizinprodukteverordnung (MDR) definiert klare Kriterien zur Einstufung von Software als Medizinprodukt. Diagnostische KI-Systeme fallen in der Regel unter die Risikoklasse IIa oder höher, wodurch hohe Anforderungen an klinische Evidenz, Risikobewertungen und technische Dokumentation entstehen \cite{ref:mdr2017}. Hersteller müssen nachweisen, dass das Modell robust, sicher und klinisch validiert ist und keine systematischen Diskriminierungen verursacht. Darüber hinaus verlangt die MDR eine kontinuierliche Überwachung nach der Markteinführung („Post-Market Surveillance“), um Leistungsabfälle, Bias-Effekte oder Fehlfunktionen frühzeitig zu erkennen \cite{ref:ema2023ai}.
+	Die europäische Medizinprodukteverordnung (MDR) definiert klare Kriterien zur Einstufung von Software als Medizinprodukt. Diagnostische KI-Systeme fallen in der Regel unter die Risikoklasse IIa oder höher, wodurch hohe Anforderungen an klinische Evidenz, Risikobewertungen und technische Dokumentation entstehen \cite{ref:mdr2017}. Hersteller müssen nachweisen, dass das Modell robust, sicher und klinisch validiert ist und keine systematischen Diskriminierungen verursacht. Darüber hinaus verlangt die MDR eine kontinuierliche Überwachung nach der Markteinführung („Post-Market Surveillance"), um Leistungsabfälle, Bias-Effekte oder Fehlfunktionen frühzeitig zu erkennen \cite{ref:ema2023ai}.
 	
 	\subsection{Datenschutz und ethische Aspekte}
 
@@ -232,7 +232,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	\begin{itemize}
 		\item \textbf{KI als Screening- oder Triage-System:} In bildgebenden Fächern kann KI zunächst unkritische Fälle identifizieren, auffällige Befunde priorisieren und so Worklists sortieren. Die endgültige Befundung bleibt bei der Radiologin bzw. dem Radiologen, der KI-Vorschläge prüfen und ggf. korrigieren kann\cite{ref:hai2025aiindex}.
-		\item \textbf{KI als Zweitmeinung:} In komplexen oder unsicheren Fällen kann ein Modell eine alternative Einschätzung liefern, etwa einen zusätzlichen Risikoscore oder eine differenzialdiagnostische Rangliste. Solche Systeme werden häufig mit einem „override“-Prinzip implementiert, bei dem Menschen Entscheidungen jederzeit verwerfen können\cite{ref:faiyazuddin2025}.
+		\item \textbf{KI als Zweitmeinung:} In komplexen oder unsicheren Fällen kann ein Modell eine alternative Einschätzung liefern, etwa einen zusätzlichen Risikoscore oder eine differenzialdiagnostische Rangliste. Solche Systeme werden häufig mit einem „override"-Prinzip implementiert, bei dem Menschen Entscheidungen jederzeit verwerfen können\cite{ref:faiyazuddin2025}.
 		\item \textbf{KI als Workflow-Assistenz:} Große Sprachmodelle und andere KI-Werkzeuge unterstützen bei Dokumentation, Strukturierung von Anamnesen, Inbox-Nachrichten oder der Extraktion relevanter Informationen aus Krankenakten\cite{ref:Artsi.2025}. Die ärztliche Entscheidung selbst wird dadurch vorbereitet, aber nicht automatisiert getroffen.
 	\end{itemize}
 	
@@ -250,7 +250,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	Aus Sicht der Mensch-Maschine-Interaktion lassen sich mehrere Faktoren für Vertrauen und Akzeptanz identifizieren\cite{ref:chen2022}\cite{ref:Artsi.2025}:
 	
 	\begin{itemize}
-		\item \textbf{Transparenz und Erklärbarkeit:} Nutzer:innen müssen verstehen können, welche Daten ein Modell verwendet, welche Unsicherheiten bestehen und wo seine Grenzen liegen. Erklärungen sollten dabei nicht nur „technisch korrekt“, sondern für die Zielgruppe verständlich und arbeitsplatznah gestaltet sein.
+		\item \textbf{Transparenz und Erklärbarkeit:} Nutzer:innen müssen verstehen können, welche Daten ein Modell verwendet, welche Unsicherheiten bestehen und wo seine Grenzen liegen. Erklärungen sollten dabei nicht nur „technisch korrekt", sondern für die Zielgruppe verständlich und arbeitsplatznah gestaltet sein.
 		\item \textbf{Gutes User Interface und Workflow-Integration:} KI-Ausgaben müssen zur richtigen Zeit am richtigen Ort erscheinen, etwa direkt im Befundungssystem oder in der elektronischen Patientenakte, anstatt in separaten Portalen. Umständliche Bedienung oder Medienbrüche reduzieren Akzeptanz, auch wenn die Modellleistung gut ist\cite{ref:Artsi.2025}.
 		\item \textbf{Kalibrierte Zuverlässigkeit:} Für das Vertrauen ist weniger die maximal erreichbare Genauigkeit entscheidend als ein gut kalibriertes Verhalten: Modelle sollten ihre Unsicherheit kommunizieren (z. B. durch Konfidenzangaben oder Warnhinweise), statt scheinbar sichere, aber potenziell falsche Ausgaben zu liefern.
 		\item \textbf{Schulung und klare Verantwortlichkeiten:} Ärztliches und pflegerisches Personal muss nicht nur die Bedienung, sondern auch typische Fehlermuster der Systeme kennen. Schulungsprogramme, Standardarbeitsanweisungen(Standard Operating Procedures) und Leitlinien sollten festhalten, wie KI-Empfehlungen dokumentiert, hinterfragt und ggf. korrigiert werden\cite{ref:faiyazuddin2025}.
@@ -260,7 +260,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	Aktuelle Übersichten zur Implementierung großer Sprachmodelle in klinischen Workflows berichten, dass frühe Anwendungen zwar häufig Effizienzgewinne und positive Nutzerfeedbacks zeigen, die Einführung aber durch regulatorische Unsicherheit, fehlende Monitoring-Konzepte und heterogene lokale Infrastrukturen erschwert wird\cite{ref:Artsi.2025}. Für robuste Human-AI-Teams sind daher nicht nur performante Modelle, sondern auch geeignete Governance-Strukturen, Monitoring und kontinuierliche Evaluation nötig.
 	
-	Insgesamt lässt sich festhalten, dass Human-AI-Teaming ein zentrales Bindeglied zwischen technischen Möglichkeiten und sicherer Versorgung darstellt. Rollenverteilung, Vertrauen, Akzeptanz und Usability sind dabei nicht nur „weiche“ Faktoren, sondern bestimmen maßgeblich, ob die in den vorangegangenen Kapiteln beschriebenen Chancen von KI in der Medizin tatsächlich in der Versorgungspraxis ankommen.
+	Insgesamt lässt sich festhalten, dass Human-AI-Teaming ein zentrales Bindeglied zwischen technischen Möglichkeiten und sicherer Versorgung darstellt. Rollenverteilung, Vertrauen, Akzeptanz und Usability sind dabei nicht nur „weiche" Faktoren, sondern bestimmen maßgeblich, ob die in den vorangegangenen Kapiteln beschriebenen Chancen von KI in der Medizin tatsächlich in der Versorgungspraxis ankommen.
 	
 	
 \section{Fazit und Ausblick}
@@ -288,7 +288,7 @@ Bundesärztekammer, ``Von ärztlicher Kunst mit Künstlicher Intelligenz: Künst
 
 \bibitem{ref:bitkom2025}
 Bitkom e.V. und Hartmannbund, 
-„KI in fast jeder siebten Praxis und vielen Kliniken im Einsatz,“ 
+„KI in fast jeder siebten Praxis und vielen Kliniken im Einsatz," 
 Presseinformation, 27. Mai 2025. [Online].  
 Verfügbar unter: \url{https://www.bitkom.org/Presse/Presseinformation/KI-in-Praxis-und-Kliniken-im-Einsatz}  
 (Zugriff am: 10. Nov. 2025).
@@ -334,7 +334,7 @@ Verfügbar unter: \url{https://aiindex.stanford.edu}
 Celi, L. A., Cellini, J., Charpignon, M.-L., Dee, E. C., Dernoncourt, F., 
 Eber, R., Mitchell, W. G., Moukheiber, L., Schirmer, J., Situ, J., 
 Paguio, J., Park, J., Wawira, J. G., Yao, S., \& for MIT Critical Data, 
-„Sources of bias in artificial intelligence that perpetuate health disparities,“ 
+„Sources of bias in artificial intelligence that perpetuate health disparities," 
 \textit{PLOS Digital Health}, 2022. [Online]. 
 Verfügbar unter: \url{https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000022} 
 (letzter Zugriff: 05.11.2025).
@@ -342,14 +342,14 @@ Verfügbar unter: \url{https://journals.plos.org/digitalhealth/article?id=10.137
 \bibitem{ref:faiyazuddin2025}
 Faiyazuddin, M., Rahman, S. J. Q., Anand, G., Siddiqui, R. K., Mehta, R., 
 Khatib, M. N., Gaidhane, S., Zahiruddin, Q. S., Hussain, A., \& Sah, R., 
-„The Impact of Artificial Intelligence on Healthcare,“ 
+„The Impact of Artificial Intelligence on Healthcare," 
 \textit{National Library of Medicine}, 2025. [Online]. 
 Verfügbar unter: \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC11702416/} 
 (letzter Zugriff: 05.11.2025).
 
 \bibitem{ref:chen2022}
 Chen, H., Gomez, C., Huang, C.-M., \& Unberath, M., 
-„Explainable medical imaging AI needs human-centered design,“ 
+„Explainable medical imaging AI needs human-centered design," 
 \textit{Nature}, 2022. [Online]. 
 Verfügbar unter: \url{https://www.nature.com/articles/s41746-022-00699-2} 
 (letzter Zugriff: 05.11.2025).

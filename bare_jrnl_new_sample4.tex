@@ -27,45 +27,46 @@
 
 % ====== Dokumentbeginn ======
 \begin{document}
-	
-	\title{KI f\"ur Wissenschaft und Medizin: 
-		Chancen, Zuverl\"assigkeit und valide Evaluationsprotokolle}
-	
-	\author{ Faik~Hadutoglu, Nico~Lang, Nicolaj~Schmid%
-		\thanks{Studiengang Fahrzeugelektronik (TFE23-2), DHBW Ravensburg.}%
-	}
-	
-	% Kopfzeile (kann auch gelassen werden)
-	\markboth{Seminararbeit -- KI f\"ur Wissenschaft und Medizin}%
-	{Lang \MakeLowercase{\textit{et al.}}: KI f\"ur Wissenschaft und Medizin}
+\title{Künstliche Intelligenz in Wissenschaft und Medizin: 
+	Potenziale, Verlässlichkeit und Evaluierungsstandards}
+
+\author{Faik~Hadutoglu, Nico~Lang, Nicolaj~Schmid%
+	\thanks{Studiengang Fahrzeugelektronik (TFE23-2), DHBW Ravensburg.}%
+}
+
+
+\markboth{Seminararbeit -- Künstliche Intelligenz in Wissenschaft und Medizin}%
+{Lang \MakeLowercase{\textit{et al.}}: Künstliche Intelligenz in Wissenschaft und Medizin}
+
 	
 	\maketitle
 	
 	% ====== Abstract & Keywords ======
-	\begin{abstract}
-Künstliche Intelligenz (KI) etabliert sich zunehmend in der medizinischen Diagnostik und biomedizinischen Forschung. Diese Arbeit untersucht, wie die Zuverlässigkeit KI-gestützter Diagnosen systematisch bewertet werden kann und welche methodischen Standards erforderlich sind, um Reproduzierbarkeit, Fairness und Transparenz zu gewährleisten. Basierend auf einer Literaturanalyse aktueller Studien und regulatorischer Leitlinien (WHO, FDA, EU-MDR) werden Chancen, Risiken und Evaluationsprotokolle für medizinische KI-Systeme analysiert. Die Ergebnisse zeigen, dass KI in spezifischen diagnostischen Aufgaben vielversprechende Leistungen erzielt, jedoch Herausforderungen wie Bias, mangelnde Reproduzierbarkeit und Black-Box-Problematik bestehen. Human-AI-Teaming mit klarer Rollenverteilung und kontinuierlichem Monitoring stellt den erfolgversprechendsten Ansatz für sichere Integration in die klinische Praxis dar.
-	\end{abstract}
-	
-	
-	
-	
-	\begin{IEEEkeywords}
-		Künstliche Intelligenz, Medizin, Diagnostik, Reproduzierbarkeit, Bias, Fairness, MDR, Human-AI-Teaming,Evaluationsprotokolle 
-	\end{IEEEkeywords}
+\begin{abstract}
+	Künstliche Intelligenz spielt eine wachsende Rolle in der medizinischen Diagnostik und biomedizinischen Forschung. Die vorliegende Arbeit analysiert Methoden zur systematischen Bewertung KI-gestützter Diagnoseverfahren und untersucht erforderliche Standards zur Sicherstellung von Reproduzierbarkeit, Fairness und Transparenz. Anhand einer Literaturauswertung aktueller Studien sowie regulatorischer Vorgaben (WHO, FDA, EU-MDR) werden Potenziale, Risiken und Bewertungsverfahren medizinischer KI-Systeme erörtert. Es zeigt sich, dass KI bei bestimmten diagnostischen Fragestellungen gute Ergebnisse liefert, gleichzeitig aber Probleme wie systematische Verzerrungen, eingeschränkte Reproduzierbarkeit und fehlende Nachvollziehbarkeit der Entscheidungsprozesse auftreten. Eine Zusammenarbeit von Mensch und KI mit definierter Aufgabenteilung und fortlaufender Überwachung erscheint als vielversprechendster Weg für einen sicheren klinischen Einsatz.
+\end{abstract}
+
+
+
+
+\begin{IEEEkeywords}
+	Künstliche Intelligenz, Medizin, Diagnostik, Reproduzierbarkeit, Bias, Fairness, MDR, Human-AI-Teaming, Evaluationsprotokolle 
+\end{IEEEkeywords}
+
 	
 	% ====== I. EINLEITUNG ======
-	\section{Einleitung}
-	\IEEEPARstart{K}{ünstliche} Intelligenz (KI) beschreibt die Fähigkeit technischer Systeme, menschliche Denkprozesse wie logisches Denken, Lernen, Planen und Kreativität nachzuahmen. Sie ermöglicht Maschinen, ihre Umgebung wahrzunehmen, die gewonnenen Informationen zu verarbeiten und daraus eigenständig Entscheidungen abzuleiten, um definierte Ziele zu erreichen. Durch die Analyse großer Datenmengen können KI-Systeme ihr Verhalten an Erfahrungen anpassen und zunehmend autonom agieren\cite{ref:epai}. Mit dem wachsenden Einsatz von KI in der Medizin entstehen neue Möglichkeiten für die Analyse medizinischer Daten - insbesondere in der Diagnostik, der Planung von Therapien sowie in der Unterstützung von Kommunikation und Dokumentation im Gesundheitswesen\cite{ref:baekki}. 
-	
-	Aktuelle Erhebungen des Digitalverbands Bitkom in Kooperation mit dem Hartmannbund - dem Verband der Ärztinnen und Ärzte Deutschlands - zeigen, dass sich der Einsatz von KI in deutschen Krankenhäusern seit 2022 innerhalb von drei Jahren nahezu verdoppelt hat. KI wird dabei nicht nur in administrativen Bereichen, etwa zur Praxisverwaltung, eingesetzt, sondern zunehmend auch unmittelbar im medizinischen Kontext - beispielsweise zur Unterstützung bei Diagnosen oder der Analyse von Vitaldaten (siehe Abbildung \ref{fig:Ki_nutzung})\cite{ref:bitkom2025}.
+\section{Einleitung}
+\IEEEPARstart{K}{ünstliche} Intelligenz (KI) bezeichnet die Fähigkeit technischer Systeme, menschliche Denkprozesse wie logisches Schließen, Lernen, Planen und Kreativität zu simulieren. Solche Systeme nehmen ihre Umgebung wahr, verarbeiten die gewonnenen Informationen und treffen eigenständig Entscheidungen zur Erreichung definierter Ziele. Durch die Auswertung großer Datenmengen passen KI-Systeme ihr Verhalten kontinuierlich an und arbeiten zunehmend autonom\cite{ref:epai}. Der wachsende Einsatz von KI in der Medizin eröffnet neue Ansätze für die Analyse medizinischer Daten – insbesondere in der Diagnostik, Therapieplanung sowie bei Kommunikation und Dokumentation im Gesundheitswesen\cite{ref:baekki}. 
 
-	Darüber hinaus befürworten 67 \% der befragten Ärztinnen und Ärzte eine gezielte Förderung des KI-Einsatzes in der Medizin. Gleichzeitig sehen 78 \% in KI eine große Chance für die zukünftige Entwicklung der Medizin, während 76 \% zugleich eine strenge Regulierung fordern, um Sicherheit und Qualität zu gewährleisten. Diese ambivalente Haltung verdeutlicht sowohl das Potenzial als auch die bestehenden Unsicherheiten beim Einsatz von KI im medizinischen Kontext\cite{ref:bitkom2025}.
+Aktuelle Erhebungen des Digitalverbands Bitkom in Zusammenarbeit mit dem Hartmannbund – dem Verband der Ärztinnen und Ärzte Deutschlands – zeigen, dass sich der KI-Einsatz in deutschen Krankenhäusern seit 2022 innerhalb von drei Jahren nahezu verdoppelt hat. KI kommt dabei nicht nur in administrativen Bereichen wie der Praxisverwaltung zum Einsatz, sondern verstärkt auch direkt im medizinischen Bereich – etwa zur Diagnoseunterstützung oder Analyse von Vitaldaten (siehe Abbildung \ref{fig:Ki_nutzung})\cite{ref:bitkom2025}.
 
-	Vor diesem Hintergrund stellt sich die zentrale Forschungsfrage, wie die Zuverlässigkeit KI-gestützter Diagnosen und wissenschaftlicher Entdeckungen valide und systematisch bewertet werden kann. Dabei gilt es zu klären, welche methodischen Standards, Evaluationsprotokolle und regulatorischen Rahmenbedingungen erforderlich sind, um Reproduzierbarkeit, Fairness und Transparenz zu gewährleisten – insbesondere im Hinblick auf die europäischen Vorgaben der Medizinprodukteverordnung (MDR).
-	
-	Dieses Paper verfolgt das Ziel, aktuelle wissenschaftliche Ansätze zur Validierung von KI-Systemen in der Medizin kritisch zu beleuchten und Kriterien für vertrauenswürdige, reproduzierbare und faire KI-basierte Entscheidungsprozesse herauszuarbeiten. 
-%	NOTE: IN WELCHEM KAPITEL WORUM ES GEHT KURZ BEXCHRIEBEN
-%	Kapitel II skizziert den Stand der Forschung, Kapitel III analysiert bestehende Herausforderungen und Bewertungsmethoden, während Kapitel IV abschließend Perspektiven für zukünftige Forschungs- und Regulierungsansätze aufzeigt.
+67 \% der befragten Ärztinnen und Ärzte sprechen sich für eine gezielte Förderung des KI-Einsatzes in der Medizin aus. Gleichzeitig sehen 78 \% in KI eine große Chance für die künftige medizinische Entwicklung, während 76 \% zugleich eine strikte Regulierung fordern, um Sicherheit und Qualität zu gewährleisten. Diese Haltung spiegelt sowohl das Potenzial als auch bestehende Unsicherheiten beim Einsatz von KI im medizinischen Kontext wider\cite{ref:bitkom2025}.
+
+Hieraus ergibt sich die zentrale Fragestellung, wie die Zuverlässigkeit KI-gestützter Diagnosen und wissenschaftlicher Erkenntnisse valide und systematisch bewertet werden kann. Zu klären ist, welche methodischen Standards, Evaluationsprotokolle und regulatorischen Rahmenbedingungen erforderlich sind, um Reproduzierbarkeit, Fairness und Transparenz sicherzustellen – insbesondere im Hinblick auf die europäische Medizinprodukteverordnung (MDR).
+
+Ziel dieser Arbeit ist es, aktuelle wissenschaftliche Ansätze zur Validierung von KI-Systemen in der Medizin kritisch zu untersuchen und Kriterien für vertrauenswürdige, reproduzierbare und faire KI-basierte Entscheidungsprozesse zu entwickeln. 
+%	NOTE: IN WELCHEM KAPITEL WORUM ES GEHT KURZ BEXCHRIEBEN WENN ANDERE FGERTIG SIND...( ODER NICHT??)
+
 
 \begin{figure}[!t]
 	\centering
@@ -73,26 +74,6 @@ Künstliche Intelligenz (KI) etabliert sich zunehmend in der medizinischen Diagn
 	\caption{\cite{ref:bitkom2025} KI-Nutzung in Arztpraxen 2025 | Quelle: Bitkom Research, 2025}
 	\label{fig:Ki_nutzung}
 \end{figure}
-
-
-	%Einstieg mit einem aktuellen Fakt oder Beispiel (z. B. „Laut WHO nutzen bereits über 50 % der europäischen Krankenhäuser KI-gestützte Systeme in der Diagnostik“).
-	% 1) Motivation: Beispiel(e) f\"ur KI in Diagnostik/Forschung nennen.
-	% 2) Problemstellung: Zuverl\"assigkeit, Reproduzierbarkeit, Bias, fehlende Standards f\"ur Studien.
-	% 3) Forschungsfrage:
-	%    „Wie lasst sich die Zuverlassigkeit KI-gest\"utzter Diagnosen systematisch bewerten
-	%     und durch valide Studien- und Evaluationsprotokolle absichern?“
-	% 4) Ziel der Arbeit und Aufbau der folgenden Kapitel kurz erkl\"aren.
-	
-%	Forshcungsfrage verständlich
-%	Teil 1: „Wie zuverlässig sind KI-gestützte Entdeckungen/Diagnosen?“
-%	→ Wie sicher und vertrauenswürdig sind Ergebnisse, die eine KI liefert – z. B. wenn sie eine Krankheit erkennt oder in der Forschung Muster in Daten findet?
-%	→ Also: Kann man sich wirklich auf die KI verlassen?
-%	→ Beispiel: Wenn eine KI bei Röntgenbildern Krebs erkennt – wie oft liegt sie richtig, wie oft falsch?
-%	→ Hier geht es um Genauigkeit, Reproduzierbarkeit und Bias (Verzerrung).
-%	Teil 2: „Wie gestaltet man valide Studien/Evaluationsprotokolle?“
-%	→ Wie kann man das wissenschaftlich überprüfen, ob die KI wirklich zuverlässig ist?
-%	→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
-%	→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
 	
 
 \section{Wie funktioniert Künstliche Intelligenz}
@@ -102,47 +83,25 @@ Die Funktionsweise moderner Systeme der Künstlichen Intelligenz (KI) basiert im
 Neuronale Netze bestehen aus einem Input-Layer, mehreren Hidden-Layers und einem Output-Layer\footnote{Der Output-Layer ist die letzte Schicht des Netzwerks und produziert die endgültige Vorhersage oder Entscheidung. Bei einer medizinischen Diagnose könnte der Output-Layer beispielsweise eine Wahrscheinlichkeit zwischen 0 und 1 ausgeben, die anzeigt, ob eine bestimmte Krankheit vorhanden ist oder nicht.}. Jede Schicht wandelt die Aktivierungen der vorherigen Schicht mithilfe gewichteter Verbindungen um, sodass unterschiedliche Muster repräsentiert werden können \cite{ref:alexander}. Während des Trainingsprozesses werden die Gewichte zwischen den Neuronen schrittweise angepasst, sodass das Netzwerk zunehmend aussagekräftige Merkmalsrepräsentationen lernt und schließlich in der Lage ist, Muster zu erkennen und zu generalisieren \cite{ref:alexander}.
 
 Dieser Prozess hängt jedoch entscheidend von der Qualität der Trainingsdaten ab. Neuronale Netze lernen ausschließlich aus den Mustern in ihren Daten - sie können daher nur so zuverlässig sein wie die Daten, auf denen sie trainiert wurden\cite{ref:morhammed2025}. Diese Abhängigkeit von guter Datenqualität ist entscheidend, um die Zuverlässigkeit KI-gestützter Diagnosen zu verstehen und zeigt, warum strenge Validierungsverfahren notwendig sind.
-	%Hier Grundlagen
-%		→ Hier geht es um Genauigkeit, Reproduzierbarkeit und Bias (Verzerrung).
-%		Teil 2: „Wie gestaltet man valide Studien/Evaluationsprotokolle?“
-%		→ Wie kann man das wissenschaftlich überprüfen, ob die KI wirklich zuverlässig ist?
-%		→ Das meint: Welche Methoden und Regeln braucht man, um KI-Modelle objektiv zu testen – ähnlich wie klinische Studien für Medikamente.
-%		→ Beispiel: Man braucht klare Datensätze, faire Vergleiche, reproduzierbare Tests, und Einhaltung von Regeln wie der MDR (Medizinprodukteverordnung).
+
 	% ================= II. GRUNDLAGEN & CHANCEN ===============
 	
 	\section{Chancen von KI in Wissenschaft und Medizin}
 	\label{sec:chancen}
-		% Kurze Einfuhrung, warum dieses Kapitel.
-	% Ziel: Leser:innen verstehen, was f\"ur KI-Systeme gemeint sind
-	% und welche Potenziale sie haben.(
-	%	Schwerpunkt: Nutzen + konkrete Anwendungsfelder + wissenschaftliche Beispiele.
-	%	Automatisierte Diagnostik: Radiologie (Röntgen, MRT, CT), Dermatologie, Pathologie.
-	%	Forschung \& Medikamentenentwicklung: KI entdeckt Muster in Gen- und Moleküldaten (z. B. DeepMind AlphaFold).
-	%	Präzisions- \& Individualmedizin: KI passt Therapien an Patientendaten an.
-	%	Wissenschaftliche Effizienz: Beschleunigte Datenauswertung, Hypothesengenerierung, Publikationsanalyse.
-	%	Gesellschaftlicher Nutzen: Entlastung medizinischer Fachkräfte, Kosteneffizienz.
-	% Tipp: Ein Mini-Beispiel bringt Punkte:
-	%	„In einer Studie von Esteva et al. (2017) erreichte ein neuronales Netz bei der Hautkrebsdiagnose eine Genauigkeit von 94 % – vergleichbar mit erfahrenen Dermatologen.“)
-	%	
 
 Künstliche Intelligenz (KI) hat sich zu einem zentralen Werkzeug in biomedizinischer Forschung und moderner Patientenversorgung entwickelt. Besonders datengetriebene Verfahren des maschinellen Lernens und Deep Learning werden inzwischen routinemäßig für Bildanalyse, Prognosemodelle und wissenschaftliche Auswertungen eingesetzt\cite{ref:hai2025aiindex}. Getrieben wird diese Entwicklung durch die Verfügbarkeit großer Datenmengen, spezialisierter Hardware und leistungsfähiger Foundation Models, die komplexe Muster in klinischen und biomedizinischen Daten erkennen können\cite{ref:hai2025aiindex}.
 	
 	\subsection{Grundbegriffe und Anwendungsfelder}
-		% - kurz definieren: Machine Learning, Deep Learning, klinische Entscheidungsunterst\"utzung
-	% - typische Anwendungsfelder:
-	%   * Bildgebende Diagnostik (Radiologie, Dermatologie, Pathologie)
-	%   * Vorhersagemodelle (z. B. Risikoabsch\"atzung, Prognose)
-	%   * Forschung (z. B. Drug Discovery, Genomik)
-	
+
 \label{subsec:grundbegriffe}
 
 Unter \emph{Machine Learning} (ML) werden Modelle verstanden, die aus Beispieldaten statistische Zusammenhänge lernen, anstatt über explizite Regeln programmiert zu werden. Häufig handelt es sich um überwachte Lernverfahren, bei denen Eingabedaten mit bekannten Zielgrößen (z.\,B. Diagnoselabels oder Ereignissen wie Rehospitalisation) verknüpft werden. \emph{Deep Learning} (DL) bezeichnet ML-Methoden mit tiefen neuronalen Netzen und ist insbesondere für Bild-, Text- und Sequenzdaten relevant\cite{ref:hai2025aiindex}. Zunehmend kommen auch generative Modelle und große Sprachmodelle zum Einsatz, die natürliche Sprache und multimodale klinische Informationen verarbeiten können. In der Medizin werden solche Modelle typischerweise in klinischen Entscheidungsunterstützungssystemen genutzt, die Diagnosen, Risikoprognosen oder Therapieentscheidungen ergänzen\cite{ref:hai2025aiindex}.
 
 Typische Anwendungsfelder sind:
 \begin{itemize}
-	\item \textbf{Bildgebende Diagnostik:} In Radiologie und Pathologie analysieren DL-Modelle Röntgen-, CT- und MRT-Daten oder histologische Schnitte, markieren auffällige Regionen und unterstützen bei der Befundung\cite{ref:hai2025aiindex}. Sie können z.\,B. unauffällige Fälle aussortieren oder Verdachtsbefunde priorisieren und so den Workflow strukturieren.
+	\item \textbf{Bildgebende Diagnostik:} In Radiologie und Pathologie analysieren DL-Modelle Röntgen-, CT- und MRT-Daten oder histologische Schnitte, markieren auffällige Regionen und unterstützen bei der Befundung\cite{ref:hai2025aiindex}. Sie können z. B. unauffällige Fälle aussortieren oder Verdachtsbefunde priorisieren und so den Workflow strukturieren.
 	\item \textbf{Klinische Prognose und Risikobewertung:} ML-Modelle verarbeiten tabellarische klinische Daten, Laborwerte oder Vitalparameter, um Komplikations- oder Rehospitalisierungsrisiken abzuschätzen\cite{ref:hai2025aiindex}. Solche Modelle werden zunehmend in Scoringsysteme integriert und können behandelnde Teams bei der Triage und Therapieplanung unterstützen.
-	\item \textbf{Biomedizinische Forschung:} Modellfamilien für Proteinsequenzen und -strukturen (z.\,B. AlphaFold, ESM3) sowie multimodale Modelle unterstützen die Identifikation neuer Zielstrukturen und Wirkstoffkandidaten\cite{ref:hai2025aiindex}. Dadurch werden hochdimensionale Omics-Daten und große Literaturkorpora systematischer nutzbar.
+	\item \textbf{Biomedizinische Forschung:} Modellfamilien für Proteinsequenzen und -strukturen (z. B. AlphaFold, ESM3) sowie multimodale Modelle unterstützen die Identifikation neuer Zielstrukturen und Wirkstoffkandidaten\cite{ref:hai2025aiindex}. Dadurch werden hochdimensionale Omics-Daten und große Literaturkorpora systematischer nutzbar.
 \end{itemize}
 
 Im Fokus dieses Beitrags stehen datengetriebene KI-Systeme, die auf großen medizinischen oder biomedizinischen Datensätzen trainiert werden und in Diagnostik, Prognose und Forschung Anwendung finden\cite{ref:hai2025aiindex}. Regelbasierte Expertensysteme und rein administrative Automatisierung werden dagegen nur am Rand berücksichtigt.
@@ -152,36 +111,30 @@ Im Fokus dieses Beitrags stehen datengetriebene KI-Systeme, die auf großen medi
 
 	\subsection{Chancen und Nutzen}
 
-		% - Automatisierung, Zeitersparnis, bessere Sensitivit\"at/Detektionsraten
-	% - Personalisierte Medizin
-	% - Entlastung von Fachpersonal
-	% - Kurze Literaturbeispiele mit Zitaten, z. B.:
-	%   „In \cite{refX} erzielte ein CNN in der Hautkrebsdiagnostik eine mit Dermatolog:innen vergleichbare Genauigkeit.“
-	
 \label{subsec:chancen_nutzen}
 
 Die beschriebenen Systeme eröffnen eine Vielzahl konkreter Potenziale für Wissenschaft und medizinische Praxis. Diese betreffen sowohl die Qualität klinischer Entscheidungen als auch Effizienzgewinne und neue Formen der Wissensgenerierung.
 
-\paragraph{Steigerung der diagnostischen Qualität.}
+\paragraph{Steigerung der diagnostischen Qualität}
 
 Mehrere aktuelle klinische Studien zeigen, dass KI-Modelle in bestimmten diagnostischen Bildgebungsaufgaben vergleichbare oder sogar bessere Leistungen als Expert:innen erzielen\cite{ref:hai2025aiindex}\cite{ref:faiyazuddin2025}. In einigen Szenarien konnten beispielsweise Sensitivität und Detektionsraten für frühe oder subtile Befunde erhöht werden, während gleichzeitig die Bearbeitungszeit pro Untersuchung sank\cite{ref:faiyazuddin2025}. Besonders vielversprechend sind Human-AI-Teams, da sich deren Diagnosegenauigkeit in Studien teils als überlegen gegenüber Einzelentscheiden erwiesen hat\cite{ref:hai2025aiindex}. KI-Systeme können dabei als „zweite Lesung“ fungieren, systematisch auf inkonsistente Befunde hinweisen und die interindividuelle Variabilität zwischen Befunder:innen reduzieren.
 
-\paragraph{Präzisionsmedizin und neue wissenschaftliche Einsichten.}
+\paragraph{Präzisionsmedizin und neue wissenschaftliche Einsichten}
 
 Große Modellarchitekturen für Proteinstrukturen und biologische Sequenzen ermöglichen es, komplexe Zusammenhänge in Omics-Daten besser zu erfassen und Strukturinformationen in bisher unerreichtem Umfang zu generieren\cite{ref:hai2025aiindex}. Dadurch werden neue Hypothesen in Biologie und Pharmakologie möglich, beispielsweise bei der Suche nach geeigneten Wirkstoffbindestellen oder der Bewertung funktioneller Konsequenzen von Varianten. In der klinischen Forschung können ML-Modelle Patient:innen in Subgruppen mit unterschiedlichen Risikoprofilen einteilen und so personalisierte Therapieansätze oder stratifizierte Studiendesigns unterstützen.
 
-\paragraph{Effizienzgewinne und Entlastung klinischer Teams.}
+\paragraph{Effizienzgewinne und Entlastung klinischer Teams}
 
 Ökonomische Analysen deuten darauf hin, dass KI in vielen medizinischen Sektoren messbare Produktivitätsgewinne ermöglicht, insbesondere durch Automatisierung repetitiver Tätigkeiten wie Vorbefundung, Triage und Dokumentation\cite{ref:hai2025aiindex}\cite{ref:faiyazuddin2025}. In der Versorgungspraxis kann dies dazu beitragen, Befundungsstaus zu reduzieren und zeitkritische Fälle schneller zu bearbeiten. Synthetische Daten werden zudem als innovative Möglichkeit für datenschutzkonforme Trainingsdatensätze und das Abbilden seltener Szenarien diskutiert\cite{ref:hai2025aiindex}. Gleichzeitig zeigen erste Evaluationsstudien, dass Effizienzgewinne nur dann realisiert werden, wenn KI-Systeme in bestehende klinische Workflows integriert und Aufgaben klar zwischen Mensch und System verteilt sind\cite{ref:faiyazuddin2025}.
 
-\paragraph{Gesellschaftlicher Nutzen und Akzeptanz.}
+\paragraph{Gesellschaftlicher Nutzen und Akzeptanz}
 
 Befragungen zeigen, dass viele Menschen KI-Anwendungen als nützlich wahrnehmen und deren Einfluss auf Alltag und Gesundheit erwarten; jedoch besteht weiterhin Skepsis bezüglich ethischer Standards und der Realisierbarkeit versprochener Vorteile\cite{ref:hai2025aiindex}. Für das Gesundheitswesen bedeutet dies, dass neben technischen Leistungskennzahlen auch Aspekte wie Transparenz, Nachvollziehbarkeit und Beteiligung von Patient:innen eine Rolle für die Akzeptanz spielen. Realistisch kommunizierte Grenzen der Systeme und sorgfältig gestaltete Aufklärung können dazu beitragen, überzogene Erwartungen und unbegründete Ängste gleichermaßen zu vermeiden.
 
 	% ================= III. RISIKEN, REPRODUZIERBARKEIT, BIAS ===============
 	
 	\section{Risiken und wissenschaftliche Herausforderungen}
-		% Ziel: zeigen, dass ihr die Probleme versteht (wichtig f\"ur eine 1.0).
+
 	\label{sec:risiken}
 	
 	Mit dem zunehmenden Einsatz von KI in sicherheitskritischen Kontexten steigen die Anforderungen an Qualität und Transparenz der zugrunde liegenden Studien. Klassische Leistungskennzahlen nähern sich inzwischen teils der Sättigung, gleichzeitig bleiben zentrale Fragen zu Robustheit, Fairness und langfristigem Verhalten vieler Systeme offen\cite{ref:hai2025aiindex}. Für eine seriöse Bewertung des Nutzens von KI in der Medizin müssen daher nicht nur technische Benchmarks, sondern auch methodische und ethische Kriterien der Studiengestaltung berücksichtigt werden.
@@ -202,9 +155,7 @@ Befragungen zeigen, dass viele Menschen KI-Anwendungen als nützlich wahrnehmen 
 	
 	\subsection{Bias und Fairness}
 	
-		% - Datensatz-Bias: unterrepr\"asentierte Gruppen (Geschlecht, Ethnie, Alter).
-	% - Folgen: unfaire Fehlerraten in vulnerablen Gruppen.
-	% - Begriffe: Fairness, Disparit\"at, Calibration, etc. (nur kurz und verst\"andlich).
+
 	
 \label{subsec:bias_fairness}
 
@@ -226,82 +177,45 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	
 		\section{Valide Studien und Evaluationsprotokolle}
-	% Dies ist euer Kernkapitel: hier zeigt ihr "wissenschaftliches Denken".
+
 	
 	Die Bewertung der Zuverlässigkeit KI-basierter medizinischer Systeme erfordert standardisierte und transparent dokumentierte Evaluationsprotokolle. Im Gegensatz zu klassischen Softwareprodukten entsteht die diagnostische Leistung einer KI nicht primär durch deterministische Algorithmen, sondern durch statistische Muster, die aus Trainingsdaten extrahiert wurden. Daher hängt die klinische Validität maßgeblich von der Qualität der Datenbasis, dem Studiendesign sowie der Robustheit der verwendeten Evaluationsmetriken ab. Zahlreiche aktuelle Leitlinien, darunter Empfehlungen der WHO sowie regulatorische Anforderungen der FDA und der EU, betonen die Notwendigkeit nachvollziehbarer und reproduzierbarer Verfahren zur Bewertung KI-basierter Diagnostik \cite{ref:whoai2021,ref:fdaprinciples,ref:ema2023ai}.
 	
-	-	\subsection{Datenbasis und Studiendesign}
-	% - Anforderungen an Datens\"atze:
-	%   * Repr\"asentativit\"at (verschiedene Kliniken, Ger\"ate, Patientengruppen)
-	%   * Gr\"o\ss e und Qualit\"at der Labels
-	% - Trennung in Trainings-, Validierungs- und Testdaten.
-	% - Externe Validierung mit unabh\"angigen Datens\"atzen.
-	% - Hinweis auf typische Datens\"atze (falls in Literatur gefunden).
+		\subsection{Datenbasis und Studiendesign}
 	
 	Ein zentraler Aspekt valider Evaluationsprotokolle ist eine repräsentative und qualitativ hochwertige Datenbasis. Für medizinische KI-Systeme bedeutet dies, dass die Datensätze ausreichend heterogen sein müssen, um verschiedene Kliniken, Aufnahmegeräte, Patientengruppen und Erkrankungsausprägungen abzudecken. Homogene Trainingsdaten führen häufig zu Modellen, die nur im ursprünglichen Kontext gut funktionieren, jedoch bei veränderten Bedingungen deutliche Leistungseinbußen zeigen \cite{ref:geirhos2020shortcut}. Derartige Domänenverschiebungen sind insbesondere in der medizinischen Diagnostik kritisch, da Fehlklassifikationen direkte Auswirkungen auf Patientensicherheit haben.
 	
 	Best Practices empfehlen eine klare Trennung der Daten in Trainings-, Validierungs- und Testmengen sowie den Einsatz einer externen Validierung, bei der das Modell auf unabhängigen Datensätzen evaluiert wird \cite{ref:kohane2019key}. Externe Validierung gilt als Goldstandard, da sie den Einsatz in realen klinischen Umgebungen realistischer abbildet. Studien zeigen, dass Modelle ohne externe Validierung häufig systematisch zu positiv bewertet werden und im klinischen Alltag schlechter abschneiden \cite{ref:liu2019comparison}. Darüber hinaus sollten alle Schritte der Datenaufbereitung – etwa Normalisierung, Segmentierung oder Annotierungsprozesse – detailliert dokumentiert werden, um Selektions- oder Messbias zu vermeiden.
 	
 	\subsection{Evaluationsmetriken f\"ur diagnostische KI}
-	% - Kurz erkl\"aren:
-	%   * Sensitivit\"at, Spezifit\"at
-	%   * Genauigkeit, F1-Score
-	%   * ROC-Kurve, AUC
-	% - Warum diese Metriken wichtig sind und wo die Grenzen sind
-	%   (z. B. verzerrte Klassenverteilung).
-	
+
 	Zur Bewertung diagnostischer Leistung werden etablierte Metriken aus der medizinischen Statistik eingesetzt. Die wichtigsten Kennzahlen umfassen Sensitivität (True-Positive-Rate), Spezifität (True-Negative-Rate), Genauigkeit sowie der F1-Score \cite{ref:jurman2012comparison}. Bei ungleich verteilten Klassen – beispielsweise seltenen Erkrankungen – ist die Genauigkeit jedoch wenig aussagekräftig. In diesen Fällen sind Metriken wie die AUC-ROC (Area Under the Receiver Operating Characteristic Curve) oder die Precision-Recall-AUC besser geeignet, da sie die Modellleistung bei unausgeglichenen Klassen realistischer abbilden \cite{ref:saito2015precision}.
 	
 	Für klinische Bewertungen spielt zudem die sogenannte „Clinical Utility“ eine Rolle. Diese berücksichtigt, wie sich ein falsch-positiver oder falsch-negativer Befund auf klinische Entscheidungen auswirkt. Moderne Studien kombinieren daher statistische Leistungsmaße mit klinischen Endpunkten, etwa veränderten Therapieentscheidungen oder Diagnosezeiten \cite{ref:brat2020realworld}. Nur durch diesen integrativen Ansatz lässt sich ermitteln, ob eine KI nicht nur statistisch gut performt, sondern auch klinisch sinnvoll eingesetzt werden kann.
 	
 	\subsection{Vergleich mit Expert:innen und klinische Studien}
-	% - Konzepte:
-	%   * Vergleichsstudien: KI vs. Fach\"arzteschaft
-	%   * Reader-Studies, Multireader-Multicase-Designs (nur kurz erw\"ahnen)
-	%   * Prospektive Studien im klinischen Alltag.
-	% - Hinweis: Ohne solche Studien ist Evidenz schwach.
-	
+
 	Ein häufig genutzter Ansatz zur Bewertung diagnostischer KI-Systeme ist der direkte Vergleich mit Ärztinnen und Ärzten. In sogenannten Reader-Studies analysieren mehrere medizinische Fachpersonen denselben Datensatz, sodass die Leistung der KI mit menschlicher Expertise verglichen werden kann \cite{ref:lakhani2017deep}. Multireader-Multicase-Studien (MRMC) gelten als besonders robust, da sie sowohl interindividuelle Unterschiede zwischen Expert:innen als auch fallabhängige Schwankungen berücksichtigen \cite{ref:berbaum1992mrmc}. Diese Studienform ermöglicht es, objektiv zu beurteilen, ob ein KI-Modell diagnostisch mindestens gleichwertig oder besser als klinisches Fachpersonal arbeitet.
 	
 	Für den Einsatz im medizinischen Alltag reicht eine Reader-Study jedoch nicht aus. Regulatorische Richtlinien wie die MDR oder FDA-Leitlinien fordern prospektive Studien im realen klinischen Workflow \cite{ref:fdaprinciples}. Solche Studien evaluieren, wie sich die KI auf tatsächliche Entscheidungen auswirkt, ob Ärztinnen und Ärzte die Modelle korrekt interpretieren und wie zuverlässig die Systeme unter variierenden Bedingungen funktionieren. Prospektive Studien gelten daher als höchste Evidenzstufe, sind jedoch organisatorisch und ethisch anspruchsvoll.
 	
 	\subsection{Dokumentation und Reproduzierbarkeit}
-	% - Notwendigkeit von:
-	%   * Detaillierter Dokumentation (Daten, Preprocessing, Modellarchitektur, Hyperparameter)
-	%   * Versionierung (Software, Modelle)
-	%   * M\"oglichkeit f\"ur andere Gruppen, Ergebnisse zu replizieren.
-	
-	% Optional: Falls ihr eine Abbildung einbauen wollt:
-	% \begin{figure}[!t]
-		%   \centering
-		%   \includegraphics[width=\linewidth]{evaluation_pipeline}
-		%   \caption{Beispielhafter Ablauf eines Evaluationsprotokolls f\"ur diagnostische KI.}
-		%   \label{fig:evaluation}
-		% \end{figure}
-	
+
 	Ein wesentlicher Grundsatz wissenschaftlicher Arbeit ist die Reproduzierbarkeit. Viele KI-Studien scheitern jedoch daran, dass zentrale Informationen zur Datenvorbereitung, Modellarchitektur oder Hyperparameterwahl unzureichend dokumentiert sind. Dies führt zu einem Reproduzierbarkeitsproblem, das die Glaubwürdigkeit wissenschaftlicher Ergebnisse untergräbt \cite{ref:hutson2018reproducibility}. Aus diesem Grund fordern internationale Organisationen umfangreiche Dokumentationsstandards, wie etwa die WHO-Guidelines zur KI in der Medizin oder das CONSORT-AI-Framework \cite{ref:consortai2020}.
 	
 	Empfohlen wird eine vollständige Offenlegung aller verwendeten Datenquellen, Vorverarbeitungsschritte, Modellversionen, Hyperparameter und Softwarebibliotheken. Darüber hinaus sollten Modelle versioniert und - sofern rechtlich möglich - öffentlich zugänglich gemacht werden. Nur durch transparente Dokumentation lässt sich sicherstellen, dass andere Forschungsgruppen die Ergebnisse unabhängig prüfen und validieren können.
 	
 	% ================= V. REGULATORIK & ETHIK =====================
 	\section{Regulatorische und ethische Rahmenbedingungen}
-	% Fokus: MDR, ggf. geplanter EU AI Act, plus Ethik/Datenschutz.
-	
+
 	Neben der wissenschaftlichen Validität spielen regulatorische und ethische Aspekte eine zentrale Rolle beim Einsatz KI-basierter Diagnosesysteme. Da Fehlentscheidungen direkte gesundheitliche Risiken bergen, unterliegen KI-Systeme in der Medizin strengen Anforderungen hinsichtlich Sicherheit, Transparenz und Datenverarbeitung.
 	
 	\subsection{KI als Medizinprodukt und die EU-MDR}
-	% - Kurz erl\"autern, dass viele KI-Systeme als Medizinprodukt gelten.
-	% - MDR: Anforderungen an Sicherheit, klinische Evidenz, Risikoklassen.
-	% - Was das f\"ur KI-Entwickler:innen bedeutet (Dokumentation, Risikoanalyse).
-	
+
 	Die europäische Medizinprodukteverordnung (MDR) definiert klare Kriterien zur Einstufung von Software als Medizinprodukt. Diagnostische KI-Systeme fallen in der Regel unter die Risikoklasse IIa oder höher, wodurch hohe Anforderungen an klinische Evidenz, Risikobewertungen und technische Dokumentation entstehen \cite{ref:mdr2017}. Hersteller müssen nachweisen, dass das Modell robust, sicher und klinisch validiert ist und keine systematischen Diskriminierungen verursacht. Darüber hinaus verlangt die MDR eine kontinuierliche Überwachung nach der Markteinführung („Post-Market Surveillance“), um Leistungsabfälle, Bias-Effekte oder Fehlfunktionen frühzeitig zu erkennen \cite{ref:ema2023ai}.
 	
 	\subsection{Datenschutz und ethische Aspekte}
-	% - DSGVO und Gesundheitsdaten.
-	% - Notwendigkeit informierter Einwilligung.
-	% - Fragen der Verantwortung/Haftung bei Fehlentscheidungen.
-	% - Ggf. WHO/ethische Leitlinien kurz erw\"ahnen.
-	
+
 	Die Verarbeitung medizinischer Daten unterliegt strengen datenschutzrechtlichen Vorgaben der DSGVO. Besonders relevant sind Anforderungen an Datensparsamkeit, Zweckbindung und die informierte Einwilligung der Patientinnen und Patienten \cite{ref:dsgvo2018}. Für KI-Systeme stellt dies eine Herausforderung dar, da Modelle häufig große, vielfältige und langfristig genutzte Datensätze benötigen. Zudem entstehen ethische Fragen hinsichtlich Fairness, Verantwortlichkeit und Transparenz. Fehlentscheidungen müssen nachvollziehbar sein, und es muss klar geregelt werden, wer im Fehlerfall haftet – der Hersteller, die behandelnde Person oder die Einrichtung \cite{ref:floridi2022ethics}. Internationale Leitlinien betonen daher die Notwendigkeit eines verantwortungsvollen Human-AI-Teaming, in dem KI als Unterstützung, nicht aber als alleiniger Entscheider fungiert \cite{ref:whoai2021}.
 	
 	
@@ -315,8 +229,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	
 	\subsection{Rollenverteilung zwischen Mensch und KI}
-	% - KI als Entscheidungsunterst\"utzung, nicht als Ersatz.
-	% - Beispiele: Radiologie-Workflows, Triage-Systeme, Zweitmeinung.
+
 	\label{subsec:rollenverteilung}
 	
 	Eine zentrale Voraussetzung für sicheres Human-AI-Teaming ist eine klare Rollenverteilung. In der Praxis lassen sich grob drei Rollenbilder unterscheiden:
@@ -332,9 +245,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	Darüber hinaus erfordert Human-AI-Teaming organisatorische Regeln: Wer darf ein System nutzen? In welchen Situationen ist eine KI-Empfehlung verpflichtend einzuholen (z.\,B. bei Triage)? Wie werden widersprüchliche Bewertungen zwischen Mensch und System dokumentiert und aufgelöst? Solche Fragen sind eng mit regulatorischen Rahmenbedingungen (z.\,B. MDR) und internen klinischen Leitlinien verknüpft.
 	
 	\subsection{Vertrauen, Akzeptanz und Usability}
-	% - Warum Transparenz, Erkl\"arbarkeit und gutes UI wichtig sind.
-	% - Schulung des Personals, klare Verantwortlichkeiten.
-	% - Kurzer Literaturbezug zu Studien, die Mensch+KI vs. Mensch allein vergleichen.
+
 	
 	\label{subsec:vertrauen}
 	
@@ -357,14 +268,6 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	
 \section{Fazit und Ausblick}
-% - Die wichtigsten Punkte der Arbeit kurz zusammenfassen:
-%   * Gro\ss es Potenzial, aber auch Risiken.
-%   * Bedeutung von guter Datenbasis, valider Evaluation, Reproduzierbarkeit.
-%   * Rolle von Regulierung (MDR) und Ethik.
-%   * Wichtigkeit von Human-AI-Teaming.
-% - Ausblick:
-%   * Bedarf an Standards f\"ur Studien/Evaluationsprotokolle.
-%   * Zuk\"unft: transparentere, fairere und adaptivere KI-Systeme.
 
 Die vorliegende Arbeit zeigt, dass KI in Wissenschaft und Medizin ein erhebliches Potenzial zur Verbesserung diagnostischer Genauigkeit, zur Entlastung klinischer Teams und zur Beschleunigung biomedizinischer Forschung bietet. Gleichzeitig wird deutlich, dass zuverlässige und faire KI-Systeme eine belastbare Datenbasis, transparente Studienprotokolle sowie reproduzierbare und klinisch aussagekräftige Evaluationsverfahren benötigen. Insbesondere Aspekte wie Bias, Generalisierbarkeit und Erklärbarkeit bleiben zentrale Herausforderungen, die in zukünftigen Forschungs- und Entwicklungsprozessen stärker berücksichtigt werden müssen.
 
@@ -373,25 +276,11 @@ Regulatorische Vorgaben wie die europäische MDR und datenschutzrechtliche Rahme
 Ausblickend besteht weiterer Forschungsbedarf bei der Entwicklung standardisierter Evaluationsprotokolle, beim Monitoring von KI-Systemen im realen Betrieb sowie bei Methoden zur Erhöhung von Transparenz und Fairness. Zukünftige KI-Modelle werden voraussichtlich stärker multimodal, erklärbarer und adaptiver sein. Damit diese Technologien jedoch verantwortungsvoll eingesetzt werden können, müssen wissenschaftliche Evidenz, technische Robustheit und ethische Prinzipien gleichermaßen berücksichtigt werden.
 
 	% ===================== REFERENCES ==============================
-	% Variante 1: BibTeX (empfohlen, wenn erlaubt)
-	% \bibliographystyle{IEEEtran}
-	% \bibliography{literaturdatei}
-	
-	% Variante 2: Manuell, wenn ihr wenige Quellen habt:
+
 	\begin{thebibliography}{99}
 		
-		% Beispiel-Eintr\"age (BITTE durch echte Literatur ersetzen):
 		
-%		\bibitem{ref:who_ai}
-%		World Health Organization, \emph{Ethics and Governance of Artificial Intelligence for Health}. WHO, 2021.
-%		
-%		\bibitem{ref:esteva_skin}
-%		A.~Esteva \emph{et al.}, ``Dermatologist-level classification of skin cancer with deep neural networks,'' \emph{Nature}, vol.~542, pp.~115--118, 2017.
-%		
-%		\bibitem{ref:mdr}
-%		European Union, ``Regulation (EU) 2017/745 on medical devices (MDR),'' 2017.
-		
-		%ECTE QUELLEN NICHT LÖSCHEN
+		%ECTE QUELLEN NICHT LÖSCHEN!!!!
 \bibitem{ref:epai}
 Europäisches Parlament, ``Was ist künstliche Intelligenz und wie wird sie genutzt?'' Generaldirektion Kommunikation, 2023. [Online]. Verfügbar unter: \url{https://www.europarl.europa.eu/news/de/headlines/priorities/kunstliche-intelligenz-in-der-eu/20230601STO93804/ki-gesetz-erste-regulierung-der-kunstlichen-intelligenz}(letzter Zugriff: 05.11.2025).
 		
@@ -410,6 +299,9 @@ Grüning, Alexander, *Künstliche Neuronale Netze – Grundlagen und Entwicklung
 Künstliche Intelligenz; Einführung in die Künstliche Intelligenz*, 
 Vorlesungspräsentationen, DHBW, unveröffentlichtes Lehrmaterial, 2025.
 
+
+
+%Abschnitt von dieser Quellewurde weggelassen??
 \bibitem{ref:kiundwir}
 F. Schmiedchen, M. Hafner, A. von Gernler und K. P. Kratzer (Hrsg.), 
 \textit{Künstliche Intelligenz und Wir: Stand, Nutzung und Herausforderungen der KI}. 

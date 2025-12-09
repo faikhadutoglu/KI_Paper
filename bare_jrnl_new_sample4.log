@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  10 DEC 2025 00:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.2)  10 DEC 2025 00:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,7 +704,7 @@ L3 programming layer <2024-02-20>
 Here is how much of TeX's memory you used:
  5391 strings out of 474116
  88494 string characters out of 5743683
- 1948187 words of memory out of 5000000
+ 1949187 words of memory out of 5000000
  27679 multiletter control sequences out of 15000+600000
  673509 words of font info for 152 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -714,7 +714,7 @@ Here is how much of TeX's memory you used:
 l/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl_new_sample4.pdf (7 pages, 653107 bytes).
+Output written on bare_jrnl_new_sample4.pdf (7 pages, 653178 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

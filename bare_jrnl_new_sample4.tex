@@ -11,21 +11,20 @@
 \usepackage{graphicx}
 \usepackage{cite}
 \hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
-% updated with editorial comments 8/9/2021
 
 
 
-% ====== Pakete (bei Bedarf anpassen) ======
-\usepackage[utf8]{inputenc}    % Umlaute
+
+
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \usepackage{cite}
 \usepackage{url}
 \usepackage{array}
-\usepackage{algorithmic} % falls ihr wirklich Algorithmen braucht
+\usepackage{algorithmic} % falls
 
-% ====== Dokumentbeginn ======
 \begin{document}
 \title{Künstliche Intelligenz in Wissenschaft und Medizin: 
 	Potenziale, Verlässlichkeit und Evaluierungsstandards}
@@ -41,7 +40,7 @@
 	
 	\maketitle
 	
-	% ====== Abstract & Keywords ======
+
 \begin{abstract}
 	Künstliche Intelligenz spielt eine wachsende Rolle in der medizinischen Diagnostik und biomedizinischen Forschung. Die vorliegende Arbeit analysiert Methoden zur systematischen Bewertung KI-gestützter Diagnoseverfahren und untersucht erforderliche Standards zur Sicherstellung von Reproduzierbarkeit, Fairness und Transparenz. Anhand einer Literaturauswertung aktueller Studien sowie regulatorischer Vorgaben (WHO, FDA, EU-MDR) werden Potenziale, Risiken und Bewertungsverfahren medizinischer KI-Systeme erörtert. Es zeigt sich, dass KI bei bestimmten diagnostischen Fragestellungen gute Ergebnisse liefert, gleichzeitig aber Probleme wie systematische Verzerrungen, eingeschränkte Reproduzierbarkeit und fehlende Nachvollziehbarkeit der Entscheidungsprozesse auftreten. Eine Zusammenarbeit von Mensch und KI mit definierter Aufgabenteilung und fortlaufender Überwachung erscheint als vielversprechendster Weg für einen sicheren klinischen Einsatz.
 \end{abstract}
@@ -54,7 +53,7 @@
 \end{IEEEkeywords}
 
 	
-	% ====== I. EINLEITUNG ======
+
 \section{Einleitung}
 \IEEEPARstart{K}{ünstliche} Intelligenz (KI) bezeichnet die Fähigkeit technischer Systeme, menschliche Denkprozesse wie logisches Schließen, Lernen, Planen und Kreativität zu simulieren. Solche Systeme nehmen ihre Umgebung wahr, verarbeiten die gewonnenen Informationen und treffen eigenständig Entscheidungen zur Erreichung definierter Ziele. Durch die Auswertung großer Datenmengen passen KI-Systeme ihr Verhalten kontinuierlich an und arbeiten zunehmend autonom\cite{ref:epai}. Der wachsende Einsatz von KI in der Medizin eröffnet neue Ansätze für die Analyse medizinischer Daten - insbesondere in der Diagnostik, Therapieplanung sowie bei Kommunikation und Dokumentation im Gesundheitswesen\cite{ref:baekki}. 
 
@@ -77,14 +76,14 @@ Ziel dieser Arbeit ist es, aktuelle wissenschaftliche Ansätze zur Validierung v
 	
 
 \section{Wie funktioniert Künstliche Intelligenz}
-
+%Faik bitte kürzen !! 
 Die Funktionsweise moderner Systeme der Künstlichen Intelligenz (KI) basiert im Kern auf der Fähigkeit, große Datenmengen zu verarbeiten und darin Muster sowie statistische Zusammenhänge zu erkennen. Ein zentrales Konzept hierbei sind künstliche neuronale Netze, die dem Aufbau biologischer Neuronen nachempfunden sind und Informationen in mehreren hierarchischen Schichten verarbeiten \cite{ref:alexander}.
 
 Neuronale Netze bestehen aus einem Input-Layer, mehreren Hidden-Layers und einem Output-Layer\footnote{Der Output-Layer ist die letzte Schicht des Netzwerks und produziert die endgültige Vorhersage oder Entscheidung. Bei einer medizinischen Diagnose könnte der Output-Layer beispielsweise eine Wahrscheinlichkeit zwischen 0 und 1 ausgeben, die anzeigt, ob eine bestimmte Krankheit vorhanden ist oder nicht.}. Jede Schicht wandelt die Aktivierungen der vorherigen Schicht mithilfe gewichteter Verbindungen um, sodass unterschiedliche Muster repräsentiert werden können \cite{ref:alexander}. Während des Trainingsprozesses werden die Gewichte zwischen den Neuronen schrittweise angepasst, sodass das Netzwerk zunehmend aussagekräftige Merkmalsrepräsentationen lernt und schließlich in der Lage ist, Muster zu erkennen und zu generalisieren \cite{ref:alexander}.
 
 Dieser Prozess hängt jedoch entscheidend von der Qualität der Trainingsdaten ab. Neuronale Netze lernen ausschließlich aus den Mustern in ihren Daten - sie können daher nur so zuverlässig sein wie die Daten, auf denen sie trainiert wurden\cite{ref:morhammed2025}. Diese Abhängigkeit von guter Datenqualität ist entscheidend, um die Zuverlässigkeit KI-gestützter Diagnosen zu verstehen und zeigt, warum strenge Validierungsverfahren notwendig sind.
 
-	% ================= II. GRUNDLAGEN & CHANCEN ===============
+
 
 \section{Chancen von KI in Wissenschaft und Medizin}
 \label{sec:chancen}
@@ -99,12 +98,19 @@ Künstliche Intelligenz (KI) ist zu einem wichtigen Werkzeug in der biomedizinis
 
 Typische Anwendungsfelder sind:
 \begin{itemize}
-	\item \textbf{Bildgebende Diagnostik:} In Radiologie und Pathologie analysieren DL-Modelle Röntgen-, CT- und MRT-Daten oder histologische Schnitte, markieren auffällige Regionen und unterstützen bei der Befundung\cite{ref:hai2025aiindex}. Sie können z. B. unauffällige Fälle aussortieren oder Verdachtsbefunde priorisieren und so den Workflow strukturieren.
+	\item \textbf{Bildgebende Diagnostik:} In Radiologie und Pathologie analysieren DL-Modelle Röntgen-, CT- und MRT-Daten oder histologische Schnitte, markieren auffällige Regionen und unterstützen bei der Befundung\cite{ref:hai2025aiindex}. Sie können z. B. unauffällige Fälle aussortieren oder Verdachtsbefunde priorisieren und so den Workflow strukturieren(siehe Abb. \ref{fig:crossNN_modell}).
 	\item \textbf{Klinische Prognose und Risikobewertung:} ML-Modelle verarbeiten tabellarische klinische Daten, Laborwerte oder Vitalparameter, um Komplikations- oder Rehospitalisierungsrisiken abzuschätzen\cite{ref:hai2025aiindex}. Solche Modelle werden zunehmend in Scoringsysteme integriert und können behandelnde Teams bei der Triage und Therapieplanung unterstützen.
 	\item \textbf{Biomedizinische Forschung:} Modellfamilien für Proteinsequenzen und -strukturen sowie multimodale Modelle unterstützen die Identifikation neuer Zielstrukturen und Wirkstoffkandidaten\cite{ref:hai2025aiindex}. Dadurch werden hochdimensionale Omics-Daten und große Literaturkorpora systematischer nutzbar.
 \end{itemize}
 
-Im Fokus dieser Arbeit stehen datengetriebene KI-Systeme, die auf großen medizinischen oder biomedizinischen Datensätzen trainiert werden und in Diagnostik, Prognose und Forschung zum Einsatz kommen\cite{ref:hai2025aiindex}. Regelbasierte Expertensysteme und rein administrative Automatisierung werden dagegen nur am Rand berücksichtigt.
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=2in]{crossNN_modell.jpeg}
+	\caption{Visualisierung eines KI-Modells(crossNN) zur Tumordiagnostik. Trainiert an über 8000 Referenztumoren, validiert an über 5000 Proben. 99,1\,\% Genauigkeit bei Hirntumoren; weiteres Modell unterscheidet über 170 Tumorarten mit 97,8\,\%. Quelle: Charité \cite{ref:charite_crossnn}}
+	\label{fig:crossNN_modell}
+\end{figure}
+
 
 	
 	
@@ -129,8 +135,6 @@ Große Modellarchitekturen für Proteinstrukturen und biologische Sequenzen erla
 
 Befragungen zeigen, dass viele Menschen KI-Anwendungen als nützlich wahrnehmen und deren Einfluss auf Alltag und Gesundheit erwarten; jedoch besteht weiterhin Skepsis bezüglich ethischer Standards und der Realisierbarkeit versprochener Vorteile\cite{ref:hai2025aiindex}. Für das Gesundheitswesen bedeutet dies, dass neben technischen Leistungskennzahlen auch Aspekte wie Transparenz, Nachvollziehbarkeit und Beteiligung von Patient:innen eine Rolle für die Akzeptanz spielen. Realistisch kommunizierte Grenzen der Systeme und sorgfältig gestaltete Aufklärung können dazu beitragen, überzogene Erwartungen und unbegründete Ängste gleichermaßen zu vermeiden.
 
-	% ================= III. RISIKEN, REPRODUZIERBARKEIT, BIAS ===============
-	
 \section{Risiken und wissenschaftliche Herausforderungen}
 \label{sec:risiken}
 
@@ -172,20 +176,20 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 
 	
 	
-		\section{Valide Studien und Evaluationsprotokolle}
+\section{Valide Studien und Evaluationsprotokolle}
 
 	
 	Die Bewertung der Zuverlässigkeit KI-basierter medizinischer Systeme erfordert standardisierte und transparent dokumentierte Evaluationsprotokolle. Im Gegensatz zu klassischen Softwareprodukten entsteht die diagnostische Leistung einer KI nicht primär durch deterministische Algorithmen, sondern durch statistische Muster, die aus Trainingsdaten extrahiert wurden. Daher hängt die klinische Validität maßgeblich von der Qualität der Datenbasis, dem Studiendesign sowie der Robustheit der verwendeten Evaluationsmetriken ab. Zahlreiche aktuelle Leitlinien, darunter Empfehlungen der WHO sowie regulatorische Anforderungen der FDA und der EU, betonen die Notwendigkeit nachvollziehbarer und reproduzierbarer Verfahren zur Bewertung KI-basierter Diagnostik \cite{ref:whoai2021,ref:fdaprinciples,ref:ema2023ai}.
 	
-		\subsection{Datenbasis und Studiendesign}
+\subsection{Datenbasis und Studiendesign}
 	
 	Ein zentraler Aspekt valider Evaluationsprotokolle ist eine repräsentative und qualitativ hochwertige Datenbasis. Für medizinische KI-Systeme bedeutet dies, dass die Datensätze ausreichend heterogen sein müssen, um verschiedene Kliniken, Aufnahmegeräte, Patientengruppen und Erkrankungsausprägungen abzudecken. Homogene Trainingsdaten führen häufig zu Modellen, die nur im ursprünglichen Kontext gut funktionieren, jedoch bei veränderten Bedingungen deutliche Leistungseinbußen zeigen \cite{ref:geirhos2020shortcut}. Derartige Domänenverschiebungen sind insbesondere in der medizinischen Diagnostik kritisch, da Fehlklassifikationen direkte Auswirkungen auf Patientensicherheit haben.
 	
 	Best Practices empfehlen eine klare Trennung der Daten in Trainings-, Validierungs- und Testmengen sowie den Einsatz einer externen Validierung, bei der das Modell auf unabhängigen Datensätzen evaluiert wird \cite{ref:kohane2019key}. Externe Validierung gilt als Goldstandard, da sie den Einsatz in realen klinischen Umgebungen realistischer abbildet. Studien zeigen, dass Modelle ohne externe Validierung häufig systematisch zu positiv bewertet werden und im klinischen Alltag schlechter abschneiden \cite{ref:liu2019comparison}. Darüber hinaus sollten alle Schritte der Datenaufbereitung - etwa Normalisierung, Segmentierung oder Annotierungsprozesse - detailliert dokumentiert werden, um Selektions- oder Messbias zu vermeiden.
 	
-	\subsection{Evaluationsmetriken f\"ur diagnostische KI}
+\subsection{Evaluationsmetriken f\"ur diagnostische KI}
 
-	Zur Bewertung diagnostischer Leistung werden etablierte Metriken aus der medizinischen Statistik eingesetzt. Die wichtigsten Kennzahlen umfassen Sensitivität (True-Positive-Rate), Spezifität (True-Negative-Rate), Genauigkeit sowie der F1-Score \cite{ref:jurman2012comparison}. Bei ungleich verteilten Klassen - beispielsweise seltenen Erkrankungen – ist die Genauigkeit jedoch wenig aussagekräftig. In diesen Fällen sind Metriken wie die AUC-ROC (Area Under the Receiver Operating Characteristic Curve) oder die Precision-Recall-AUC besser geeignet, da sie die Modellleistung bei unausgeglichenen Klassen realistischer abbilden \cite{ref:saito2015precision}.
+	Zur Bewertung diagnostischer Leistung werden etablierte Metriken aus der medizinischen Statistik eingesetzt. Die wichtigsten Kennzahlen umfassen Sensitivität (True-Positive-Rate), Spezifität (True-Negative-Rate), Genauigkeit sowie der F1-Score \cite{ref:jurman2012comparison}. Bei ungleich verteilten Klassen - beispielsweise seltenen Erkrankungen - ist die Genauigkeit jedoch wenig aussagekräftig. In diesen Fällen sind Metriken wie die AUC-ROC (Area Under the Receiver Operating Characteristic Curve) oder die Precision-Recall-AUC besser geeignet, da sie die Modellleistung bei unausgeglichenen Klassen realistischer abbilden \cite{ref:saito2015precision}.
 	
 	Für klinische Bewertungen spielt zudem die sogenannte „Clinical Utility" eine Rolle. Diese berücksichtigt, wie sich ein falsch-positiver oder falsch-negativer Befund auf klinische Entscheidungen auswirkt. Moderne Studien kombinieren daher statistische Leistungsmaße mit klinischen Endpunkten, etwa veränderten Therapieentscheidungen oder Diagnosezeiten \cite{ref:brat2020realworld}. Nur durch diesen integrativen Ansatz lässt sich ermitteln, ob eine KI nicht nur statistisch gut performt, sondern auch klinisch sinnvoll eingesetzt werden kann.
 	
@@ -201,7 +205,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	Empfohlen wird eine vollständige Offenlegung aller verwendeten Datenquellen, Vorverarbeitungsschritte, Modellversionen, Hyperparameter und Softwarebibliotheken. Darüber hinaus sollten Modelle versioniert und - sofern rechtlich möglich - öffentlich zugänglich gemacht werden. Nur durch transparente Dokumentation lässt sich sicherstellen, dass andere Forschungsgruppen die Ergebnisse unabhängig prüfen und validieren können.
 	
-	% ================= V. REGULATORIK & ETHIK =====================
+
 	\section{Regulatorische und ethische Rahmenbedingungen}
 
 	Neben der wissenschaftlichen Validität spielen regulatorische und ethische Aspekte eine zentrale Rolle beim Einsatz KI-basierter Diagnosesysteme. Da Fehlentscheidungen direkte gesundheitliche Risiken bergen, unterliegen KI-Systeme in der Medizin strengen Anforderungen hinsichtlich Sicherheit, Transparenz und Datenverarbeitung.
@@ -216,9 +220,9 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	
 	
-	% ================= VI. HUMAN-AI-TEAMING ========================
+
 	\section{Human-AI-Teaming in der medizinischen Praxis}
-	% Ziel: deutlich machen, dass KI nicht alles allein entscheiden soll.
+
 	\label{sec:human_ai_teaming}
 	
 	Die zuvor beschriebenen Chancen und Risiken machen deutlich, dass KI-Systeme in der Medizin nicht als autonome Entscheidungsträger verstanden werden sollten, sondern als Werkzeuge, die menschliche Expertise ergänzen. Anstatt Ärztinnen und Ärzte zu ersetzen, zielt \emph{Human-AI-Teaming} darauf ab, Stärken von Mensch und Maschine sinnvoll zu kombinieren: KI übernimmt wiederkehrende, datenintensive Aufgaben, während klinische Verantwortung, Kontextbewertung und ethische Abwägungen beim Menschen verbleiben\cite{ref:hai2025aiindex}\cite{ref:faiyazuddin2025}.
@@ -294,19 +298,10 @@ Verfügbar unter: \url{https://www.bitkom.org/Presse/Presseinformation/KI-in-Pra
 (Zugriff am: 10. Nov. 2025).
 
 \bibitem{ref:alexander}
-Grüning, Alexander, *Künstliche Neuronale Netze – Grundlagen und Entwicklungen; 
+Grüning, Alexander, *Künstliche Neuronale Netze - Grundlagen und Entwicklungen; 
 Künstliche Intelligenz; Einführung in die Künstliche Intelligenz*, 
 Vorlesungspräsentationen, DHBW, unveröffentlichtes Lehrmaterial, 2025.
 
-
-
-%Abschnitt von dieser Quellewurde weggelassen??
-\bibitem{ref:kiundwir}
-F. Schmiedchen, M. Hafner, A. von Gernler und K. P. Kratzer (Hrsg.), 
-\textit{Künstliche Intelligenz und Wir: Stand, Nutzung und Herausforderungen der KI}. 
-Springer Vieweg, Berlin, 2026. 
-[Online]. Verfügbar unter: \url{https://doi.org/10.1007/978-3-662-71567-3} 
-(letzter Zugriff: 17.11.2025).
 
 \bibitem{ref:morhammed2025}
 S. Morhammed, L. Budach, M. Feuerpfeil, N. Ihde, A. Nathansen, N. Noack, H. Patzlaff, F. Naumann und H. Harmouch, 
@@ -316,11 +311,17 @@ S. Morhammed, L. Budach, M. Feuerpfeil, N. Ihde, A. Nathansen, N. Noack, H. Patz
 (letzter Zugriff: 05.11.2025).  
 
 
-\bibitem{ref:3b1b}
-Grant Sanderson, ``Gradient descent, how neural networks learn,'' 3Blue1Brown, 2017.  
-[Online]. Verfügbar unter: \url{https://www.3blue1brown.com/topics/neural-networks}  
-(letzter Zugriff: 16.11.2025).
 
+%dieser Abschinit haben wir nicht mehr !!
+%\bibitem{ref:3b1b}
+%Grant Sanderson, ``Gradient descent, how neural networks learn,'' 3Blue1Brown, 2017.  
+%[Online]. Verfügbar unter: \url{https://www.3blue1brown.com/topics/neural-networks}
+%(letzter Zugriff: 16.11.2025).
+
+\bibitem{ref:charite_crossnn}
+Charité – Universitätsmedizin Berlin, ``Tumordiagnostik: KI-Modell erkennt mehr als 170 Krebsarten,'' Pressemitteilung, 06.06.2025. [Online]. Verfügbar unter: 
+\url{https://www.charite.de/service/pressemitteilung/artikel/detail/tumordiagnostik_ki_modell_erkennt_mehr_als_170_krebsarten} 
+(letzter Zugriff: 09.12.2025).
 
 %nico Quellen
 \bibitem{ref:hai2025aiindex}
@@ -382,7 +383,7 @@ EMA/819319/2021, 2023.
 \bibitem{ref:geirhos2020shortcut}
 R. Geirhos et al.,
 ``Shortcut Learning in Deep Neural Networks,''
-\textit{Nature Machine Intelligence}, vol. 2, pp. 665–673, 2020.
+\textit{Nature Machine Intelligence}, vol. 2, pp. 665-673, 2020.
 doi: 10.1038/s42256-020-00257-z
 [Online]. Available: \url{https://www.nature.com/articles/s42256-020-00257-z}
 

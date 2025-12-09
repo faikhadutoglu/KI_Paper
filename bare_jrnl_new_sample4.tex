@@ -43,16 +43,14 @@
 	
 	% ====== Abstract & Keywords ======
 	\begin{abstract}
-		% Kurz zusammenfassen (ca. 5--7 Sätze):
-		% 1) Kontext: KI in Medizin/Wissenschaft.
-		% 2) Problem: Zuverl\"assigkeit und Evidenz schwer zu bewerten.
-		% 3) Ziel: Analyse von Chancen/Risiken und Anforderungen an Studien/Evaluationsprotokolle.
-		% 4) Vorgehen: Literatur\"ubersicht + strukturierte Einordnung (Reproduzierbarkeit, Bias, MDR, Human-AI-Teaming).
-		% 5) Ergebnis: Wichtige Kriterien f\"ur valide KI-Studien und sichere Integration in die Praxis.
+Künstliche Intelligenz (KI) etabliert sich zunehmend in der medizinischen Diagnostik und biomedizinischen Forschung. Diese Arbeit untersucht, wie die Zuverlässigkeit KI-gestützter Diagnosen systematisch bewertet werden kann und welche methodischen Standards erforderlich sind, um Reproduzierbarkeit, Fairness und Transparenz zu gewährleisten. Basierend auf einer Literaturanalyse aktueller Studien und regulatorischer Leitlinien (WHO, FDA, EU-MDR) werden Chancen, Risiken und Evaluationsprotokolle für medizinische KI-Systeme analysiert. Die Ergebnisse zeigen, dass KI in spezifischen diagnostischen Aufgaben vielversprechende Leistungen erzielt, jedoch Herausforderungen wie Bias, mangelnde Reproduzierbarkeit und Black-Box-Problematik bestehen. Human-AI-Teaming mit klarer Rollenverteilung und kontinuierlichem Monitoring stellt den erfolgversprechendsten Ansatz für sichere Integration in die klinische Praxis dar.
 	\end{abstract}
 	
+	
+	
+	
 	\begin{IEEEkeywords}
-		K\"unstliche Intelligenz, Medizin, Diagnostik, Reproduzierbarkeit, Bias, Fairness, MDR, Human-AI-Teaming
+		Künstliche Intelligenz, Medizin, Diagnostik, Reproduzierbarkeit, Bias, Fairness, MDR, Human-AI-Teaming,Evaluationsprotokolle 
 	\end{IEEEkeywords}
 	
 	% ====== I. EINLEITUNG ======
@@ -211,7 +209,7 @@ Befragungen zeigen, dass viele Menschen KI-Anwendungen als nützlich wahrnehmen 
 \label{subsec:bias_fairness}
 
 
-Bias kann auftreten, wenn Vorhersagen systematisch bestimmte Gruppen benachteiligen, etwa aufgrund einseitiger Trainingsdaten oder ungeeigneter Zielgrößen\cite{ref:hai2025aiindex}\cite{ref:celi2022bias}. Das Vertrauen, dass KI diskriminierungsfrei agiert, ist laut Umfragen gesunken. Wissenschaftliche Studien mahnen daher, Leistungsvergleiche in relevanten Subgruppen (Geschlecht, Alter, Ethnie) zu berichten und Zielgrößen kritisch zu wählen\cite{ref:celi2022bias}\citen{ref:hai2025aiindex}. Neben deskriptiven Analysen gewinnt auch die explizite Messung von Fairness an Bedeutung, etwa durch Metriken, die Fehlerraten oder Kalibrierung zwischen Gruppen vergleichen\cite{ref:celi2022bias}. 
+Bias kann auftreten, wenn Vorhersagen systematisch bestimmte Gruppen benachteiligen, etwa aufgrund einseitiger Trainingsdaten oder ungeeigneter Zielgrößen\cite{ref:hai2025aiindex}\cite{ref:celi2022bias}. Das Vertrauen, dass KI diskriminierungsfrei agiert, ist laut Umfragen gesunken. Wissenschaftliche Studien mahnen daher, Leistungsvergleiche in relevanten Subgruppen (Geschlecht, Alter, Ethnie) zu berichten und Zielgrößen kritisch zu wählen\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}. Neben deskriptiven Analysen gewinnt auch die explizite Messung von Fairness an Bedeutung, etwa durch Metriken, die Fehlerraten oder Kalibrierung zwischen Gruppen vergleichen\cite{ref:celi2022bias}. 
 
 Zur Reduktion von Bias werden Ansätze entlang der gesamten Entwicklungskette diskutiert: von der gezielten Diversifizierung und Dokumentation von Datensätzen über anpassbare Schwellenwerte in verschiedenen Subgruppen bis hin zu algorithmischen Korrekturverfahren\cite{ref:celi2022bias}\cite{ref:hai2025aiindex}. Für die Praxis bleibt jedoch zentral, dass potenzielle Verzerrungen offengelegt werden und klinische Entscheidungen nicht unkritisch automatisiert übernommen werden.
 
@@ -346,7 +344,7 @@ Transparenz und Erklärbarkeit sind somit nicht nur ethische Anforderungen, sond
 	
 	\begin{itemize}
 		\item \textbf{Transparenz und Erklärbarkeit:} Nutzer:innen müssen verstehen können, welche Daten ein Modell verwendet, welche Unsicherheiten bestehen und wo seine Grenzen liegen. Erklärungen sollten dabei nicht nur „technisch korrekt“, sondern für die Zielgruppe verständlich und arbeitsplatznah gestaltet sein.
-		\item \textbf{Gutes User Interface und Workflow-Integration:} KI-Ausgaben müssen zur richtigen Zeit am richtigen Ort erscheinen, etwa direkt im Befundungssystem oder in der elektronischen Patientenakte, anstatt in separaten Portalen. Umständliche Bedienung oder Medienbrüche reduzieren Akzeptanz, auch wenn die Modellleistung gut ist\cite{Artsi.2025}.
+		\item \textbf{Gutes User Interface und Workflow-Integration:} KI-Ausgaben müssen zur richtigen Zeit am richtigen Ort erscheinen, etwa direkt im Befundungssystem oder in der elektronischen Patientenakte, anstatt in separaten Portalen. Umständliche Bedienung oder Medienbrüche reduzieren Akzeptanz, auch wenn die Modellleistung gut ist\cite{ref:Artsi.2025}.
 		\item \textbf{Kalibrierte Zuverlässigkeit:} Für das Vertrauen ist weniger die maximal erreichbare Genauigkeit entscheidend als ein gut kalibriertes Verhalten: Modelle sollten ihre Unsicherheit kommunizieren (z.\,B. durch Konfidenzangaben oder Warnhinweise), statt scheinbar sichere, aber potenziell falsche Ausgaben zu liefern.
 		\item \textbf{Schulung und klare Verantwortlichkeiten:} Ärztliches und pflegerisches Personal muss nicht nur die Bedienung, sondern auch typische Fehlermuster der Systeme kennen. Schulungsprogramme, Standardarbeitsanweisungen (Standard Operating Procedures (SOPs)) und Leitlinien sollten festhalten, wie KI-Empfehlungen dokumentiert, hinterfragt und ggf.\ korrigiert werden\cite{ref:faiyazuddin2025}.
 	\end{itemize}
